@@ -1,0 +1,38 @@
+section + section {
+	margin-top: 5em;
+}
+
+p + p {
+	margin-top: 2em;
+}
+
+.l-centered {
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.l-flex {
+	display: flex;
+}
+
+.l-flex-equal-width > * {
+	flex: 1 1 0px; /* Set flex-basis to 0 so all elements have same starting point and allow them to grow. */
+}
+
+.l-flex-column {
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.l-sidebar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	align-self: flex-start; /* Needed so that flex-item can be sticky. No idea why. */
+	height: 100vh;
+	margin-right: 2em;
+}
+
+.l-margin-top {
+	margin-top: 3em;
+}
