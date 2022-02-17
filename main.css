@@ -51,7 +51,6 @@ p + p {
 	left: 0;
 	align-self: flex-start; /* Needed so that flex-item can be sticky. No idea why. */
 	height: 100vh;
-	margin-right: 4em;
 	min-width: 300px;
 }
 
@@ -76,9 +75,33 @@ p + p {
 }
 
 /* Modules */
+nav li {
+	letter-spacing: 0.2em;
+}
 
 nav li + li {
 	margin-top: 2em;
+}
+
+.logo {
+	letter-spacing: 0.3em;
+	font-size: 2em;
+}
+
+.profile-img {
+	width: 50%;
+	height: auto;
+	border-radius: 50%;
+	filter: grayscale(100%);
+}
+
+main > section {
+	padding: 2em 4em;
+	border-radius: 2%;
+}
+
+main h2 {
+	letter-spacing: 0.2em;
 }
 
 .socials-bar i {
@@ -89,17 +112,25 @@ nav li + li {
 /* Themes */
 
 .bg-color-primary {
-	background-color: #003366;
+	background-color: #07233b;
 }
 
 .bg-color-secondary {
-	background-color: #6699CC;
+	background-color: #003366;
 }
 
 .font-color-primary, .font-color-primary a {
-	color: #C0C0C0;
+	color: #ffffff;
 }
 
-.font-color-secondary, .font-color-secondary a {
+.font-color-secondary {
+	color: hsl(208, 79%, 92%);
+}
+
+.font-color-tertiary, .font-color-tertiary a {
 	color: #e85a0d;
+}
+
+.box-shadow {
+	box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.3),0 -2px 10px 0 rgba(0,0,0,0.2);
 }
