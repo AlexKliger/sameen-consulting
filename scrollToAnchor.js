@@ -9,7 +9,7 @@ $('a[href*="#"]') // Selects all links with hashes.
             $('html, body').animate({
                 scrollTop: target.offset().top
             }, 700, function() {
-                // Callback after animation. Must change focus!
+                // Callback after animation. Must change focus.
                 var $target = $(target);
                 $target.focus();
                 if ($target.is(":focus")) {
