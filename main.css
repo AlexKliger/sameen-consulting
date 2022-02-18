@@ -50,12 +50,8 @@ p + p {
 }
 
 .l-aside {
-	position: sticky;
-	top: 0;
-	left: 0;
-	align-self: flex-start; /* Needed so that flex-item can be sticky. No idea why. */
-	height: 100vh;
-	min-width: 350px;
+	position: fixed;
+	max-width: 350px;
 }
 
 .l-vertical-margin {
