@@ -10,7 +10,6 @@ h1, h2 {
 }
 
 /* Typography */
-
 html {
 	font-family: sans-serif;
 }
@@ -27,16 +26,25 @@ p + p {
 	margin-top: 2em;
 }
 
-/* Layout */
-
-.l-centered {
-	max-width: 40%;
-	margin: 0 auto;
+/* Custom layout properties */
+:root {
+	--side-bar-width: 350px;
+	--main-content-width: 40%;
+	/* Main content offset with respect to side bar and main content widths. */
+	--main-content-offset-from-left: calc((100% - var(--main-content-width))/2 + var(--side-bar-width)/2);
 }
 
-.l-flex-row {
-	display: flex;
-	gap: 3em;
+/* Layout */
+.l-main-content {
+	max-width: var(--main-content-width);
+	margin: 0 auto 0 var(--main-content-offset-from-left);
+}
+
+.l-aside {
+	position: fixed;
+	/* Calculate offset from the left with respect to offset from left of main content. */
+	left: calc(var(--main-content-offset-from-left) - var(--side-bar-width) - 3em);
+	width: var(--side-bar-width);
 }
 
 .l-flex-column {
@@ -45,11 +53,6 @@ p + p {
 	justify-content: space-between;
 }
 
-.l-aside {
-	position: fixed;
-	left: 7em;
-	max-width: 20%;
-}
 
 .l-vertical-margin {
 	margin: 4em 0;
