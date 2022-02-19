@@ -5,7 +5,7 @@ ol, ul {
 	padding: 0;
 }
 
-h1 {
+h1, h2 {
 	margin-top: 0;
 }
 
@@ -23,10 +23,6 @@ p {
 	line-height: 1.4em;
 }
 
-section + section {
-	margin-top: 5em;
-}
-
 p + p {
 	margin-top: 2em;
 }
@@ -34,7 +30,7 @@ p + p {
 /* Layout */
 
 .l-centered {
-	max-width: 60%;
+	max-width: 40%;
 	margin: 0 auto;
 }
 
@@ -51,7 +47,8 @@ p + p {
 
 .l-aside {
 	position: fixed;
-	max-width: 350px;
+	left: 7em;
+	max-width: 20%;
 }
 
 .l-vertical-margin {
@@ -100,7 +97,6 @@ nav li + li {
 
 main > section {
 	padding: 2em 4em;
-	border-radius: 2%;
 }
 
 main h2 {
@@ -126,12 +122,16 @@ main h2 {
 	background-color: hsl(208, 79%, 15%);
 }
 
+.bg-color-tertiary {
+	background-color: #ffffff;
+}
+
 .font-color-primary, .font-color-primary a {
 	color: #ffffff;
 }
 
 .font-color-secondary {
-	color: hsl(208, 79%, 92%);
+	color: #07233b;
 }
 
 .font-color-tertiary, .font-color-tertiary a {
