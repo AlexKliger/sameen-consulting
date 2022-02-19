@@ -1,17 +1,56 @@
 /* Reset */
-ol, ul {
-	list-style: none;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-h1, h2 {
-	margin-top: 0;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* Typography */
 html {
 	font-family: sans-serif;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-bottom: 1em;
 }
 
 a {
@@ -26,12 +65,19 @@ p + p {
 	margin-top: 2em;
 }
 
-/* Custom layout properties */
+/* Custom properties */
 :root {
-	--side-bar-width: 350px;
+	/* Layout */
+	--sidebar-main-gap: 3em;
+	--sidebar-width: 350px;
 	--main-content-width: 40%;
 	/* Main content offset with respect to side bar and main content widths. */
-	--main-content-offset-from-left: calc((100% - var(--main-content-width))/2 + var(--side-bar-width)/2);
+	--main-content-offset-from-left: calc((100% - var(--main-content-width, 40%))/2
+										+ (var(--sidebar-width, 350px))/2
+										+ (var(--sidebar-main-gap, 3em))/2);
+
+	/* Theme */
+	--font-color-tertiary: #e85a0d;
 }
 
 /* Layout */
@@ -40,11 +86,14 @@ p + p {
 	margin: 0 auto 0 var(--main-content-offset-from-left);
 }
 
-.l-aside {
+.l-sidebar {
 	position: fixed;
 	/* Calculate offset from the left with respect to offset from left of main content. */
-	left: calc(var(--main-content-offset-from-left) - var(--side-bar-width) - 3em);
-	width: var(--side-bar-width);
+	left: calc(var(--main-content-offset-from-left, 60%)
+		- var(--sidebar-width, 350px)
+		- var(--sidebar-main-gap, 3em));
+	width: var(--sidebar-width, 350px);
+	height: 100vh;
 }
 
 .l-flex-column {
@@ -87,6 +136,7 @@ nav li + li {
 	letter-spacing: 0.3em;
 	font-size: 2em;
 	text-align: center;
+	margin-bottom: 2rem;
 }
 
 .profile-img {
@@ -96,14 +146,42 @@ nav li + li {
 	height: auto;
 	border-radius: 50%;
 	filter: grayscale(100%);
+	margin-bottom: 1em;
 }
 
-main > section {
-	padding: 2em 4em;
+main {
+	text-align: justify;
+	font-size: 1.4rem;
 }
 
 main h2 {
-	letter-spacing: 0.2em;
+	font-size: 2em;
+	letter-spacing: 0.3em;
+}
+
+main section:not(:first-child) {
+	padding-top: 3em;
+}
+
+main section:not(:last-child) {
+	padding-bottom: 3em;
+}
+
+.services--grid {
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 3em;
+}
+
+.services--grid i {
+	font-size: 2em;
+	padding-bottom: 0.5em;
+	color: var(--font-color-tertiary);
+}
+
+.services--grid h3 {
+	font-size: 0.7em;
 }
 
 .socials-bar {
