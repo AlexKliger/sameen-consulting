@@ -43,6 +43,14 @@ table {
 	border-spacing: 0;
 }
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	     box-sizing: border-box;
+}
+
 /* Typography */
 html {
 	font-family: sans-serif;
@@ -65,11 +73,17 @@ p + p {
 	margin-top: 2em;
 }
 
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 /* Custom properties */
 :root {
 	/* Layout */
 	--sidebar-main-gap: 6rem;
-	--sidebar-width: 350px;
+	--sidebar-width: 400px;
 	--main-content-width: 40%;
 	/* Main content offset with respect to side bar and main content widths. */
 	--main-content-offset-from-left: calc((100% - var(--main-content-width, 40%))/2
@@ -138,6 +152,7 @@ p + p {
 
 /* Modules */
 nav li {
+	font-size: 1.5rem;
 	letter-spacing: 0.3em;
 }
 
@@ -185,6 +200,7 @@ main section:not(:last-child) {
 }
 
 .services--grid {
+	padding: 2rem 1rem;
 	text-align: center;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -192,10 +208,11 @@ main section:not(:last-child) {
 }
 
 .services--grid i {
-	font-size: 2em;
+	font-size: 3rem;
 	padding-bottom: 0.5em;
 	color: var(--font-color-tertiary);
 }
+
 
 .services--grid h3 {
 	font-size: 0.7em;
@@ -210,6 +227,10 @@ main section:not(:last-child) {
 	margin-right: 0.5em;
 }
 
+.contact-form {
+	padding: 1em 2em;
+}
+
 input[type=text], textarea {
 	margin-top: 1em;
 	margin-bottom: 2em;
@@ -221,13 +242,14 @@ input[type=text], textarea {
 }
 
 input[type=submit] {
-	padding: 0.8em 1em;
+	padding: 0.8rem 1rem;
 	background-color: var(--font-color-tertiary);
 	color: var(--font-color-primary);
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
 }
+
 
 label {
 	color: var(--font-color-tertiary);
@@ -265,5 +287,5 @@ label {
 }
 
 .border-radius {
-	border-radius: 2%;
+	border-radius: 15px;
 }
