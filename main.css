@@ -1,18 +1,64 @@
 /* Reset */
-ol, ul {
-	list-style: none;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-h1 {
-	margin-top: 0;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	     box-sizing: border-box;
 }
 
 /* Typography */
-
 html {
 	font-family: sans-serif;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-bottom: 1em;
 }
 
 a {
@@ -20,42 +66,59 @@ a {
 }
 
 p {
-	line-height: 1.4em;
-}
-
-section + section {
-	margin-top: 5em;
+	line-height: 1.5em;
 }
 
 p + p {
 	margin-top: 2em;
 }
 
-/* Layout */
-
-.l-centered {
-	max-width: 60%;
-	margin: 0 auto;
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
-.l-flex-row {
-	display: flex;
-	gap: 3em;
+/* Custom properties */
+:root {
+	/* Layout */
+	--sidebar-main-gap: 6rem;
+	--sidebar-width: 400px;
+	--main-content-width: 40%;
+	/* Main content offset with respect to side bar and main content widths. */
+	--main-content-offset-from-left: calc((100% - var(--main-content-width, 40%))/2
+										+ (var(--sidebar-width, 350px))/2
+										+ (var(--sidebar-main-gap, 4rem))/2);
+
+	/* Theme */
+	--bg-color-primary: #07233b;
+	--bg-color-secondary: #082844;
+	--bg-color-tertiary: #ffffff;
+	--font-color-primary: #ffffff;
+	--font-color-secondary: #07233b;
+	--font-color-tertiary: #e85a0d;
+}
+
+/* Layout */
+.l-main-content {
+	max-width: var(--main-content-width);
+	margin: 0 auto 0 var(--main-content-offset-from-left);
+}
+
+.l-sidebar {
+	position: fixed;
+	/* Calculate offset from the left with respect to offset from left of main content. */
+	left: calc(var(--main-content-offset-from-left, 60%)
+		- var(--sidebar-width, 350px)
+		- var(--sidebar-main-gap, 3em));
+	width: var(--sidebar-width, 350px);
+	height: 100vh;
 }
 
 .l-flex-column {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
-
-.l-aside {
-	position: sticky;
-	top: 0;
-	left: 0;
-	align-self: flex-start; /* Needed so that flex-item can be sticky. No idea why. */
-	height: 100vh;
-	min-width: 350px;
 }
 
 .l-vertical-margin {
@@ -67,10 +130,14 @@ p + p {
 }
 
 .l-margin-top {
+	margin-top: 1em;
+}
+
+.l-margin-top-low {
 	margin-top: 4em;
 }
 
-.l-margin-bottom {
+.l-margin-bottom-high {
 	margin-bottom: 4em;
 }
 
@@ -78,9 +145,15 @@ p + p {
 	margin-bottom: 7em;
 }
 
+.l-float-left {
+	float: left;
+	padding-right: 1em;
+}
+
 /* Modules */
 nav li {
-	letter-spacing: 0.2em;
+	font-size: 1.5rem;
+	letter-spacing: 0.3em;
 }
 
 nav li + li {
@@ -89,26 +162,60 @@ nav li + li {
 
 .logo {
 	letter-spacing: 0.3em;
-	font-size: 2em;
+	line-height: 1.25;
+	font-size: 2.2em;
 	text-align: center;
+	margin-bottom: 2rem;
 }
 
 .profile-img {
 	display: block;
-	width: 50%;
+	width: 175px;
 	margin: 0 auto;
 	height: auto;
 	border-radius: 50%;
 	filter: grayscale(100%);
 }
 
-main > section {
-	padding: 2em 4em;
-	border-radius: 2%;
+main {
+	text-align: justify;
+	font-size: 1.4rem;
 }
 
 main h2 {
-	letter-spacing: 0.2em;
+	font-size: 2em;
+	letter-spacing: 0.3em;
+}
+
+main section:not(:first-child) {
+	padding-top: 3em;
+}
+
+main section:not(:last-child) {
+	padding-bottom: 3em;
+}
+
+.sidebar {
+	padding: 3em 2em;
+}
+
+.services--grid {
+	padding: 2rem 1rem;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 3em;
+}
+
+.services--grid i {
+	font-size: 3rem;
+	padding-bottom: 0.5em;
+	color: var(--font-color-tertiary);
+}
+
+
+.services--grid h3 {
+	font-size: 0.7em;
 }
 
 .socials-bar {
@@ -120,32 +227,65 @@ main h2 {
 	margin-right: 0.5em;
 }
 
-/* Themes */
+.contact-form {
+	padding: 1em 2em;
+}
 
+input[type=text], textarea {
+	margin-top: 1em;
+	margin-bottom: 2em;
+	padding: 1em;
+	border-radius: 4px;
+	width: 100%;
+	border: none;
+	box-shadow: inset 0 2px 4px 0 hsla(0, 0%, 0%, 0.5);
+}
+
+input[type=submit] {
+	padding: 0.8rem 1rem;
+	background-color: var(--font-color-tertiary);
+	color: var(--font-color-primary);
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+}
+
+
+label {
+	color: var(--font-color-tertiary);
+	font-size: 0.8em;
+	letter-spacing: 0.3em;
+}
+
+/* Themes */
 .bg-color-primary {
-	background-color: #07233b;
+	background-color: var(--bg-color-primary);
 }
 
 .bg-color-secondary {
-	background-color: hsl(208, 79%, 15%);
+	background-color: var(--bg-color-secondary);
+}
+
+.bg-color-tertiary {
+	background-color: var(--bg-color-tertiary);
 }
 
 .font-color-primary, .font-color-primary a {
-	color: #ffffff;
+	color: var(--font-color-primary);
 }
 
 .font-color-secondary {
-	color: hsl(208, 79%, 92%);
+	color: var(--font-color-secondary);
 }
 
 .font-color-tertiary, .font-color-tertiary a {
-	color: #e85a0d;
+	color: var(--font-color-tertiary);
 }
 
 .box-shadow {
-	box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.3),0 -2px 10px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3),0 2px 10px 0 rgba(0,0,0,0.2);
 }
 
 .border-radius {
-	border-radius: 2%;
+	border-radius: 15px;
 }
