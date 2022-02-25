@@ -56,8 +56,8 @@ html {
 	font-family: sans-serif;
 }
 
-h2 {
-	font-size: 1.5em;
+h2, h3 {
+	font-size: 1.5rem;
 	margin-bottom: 1em;
 }
 
@@ -66,6 +66,7 @@ a {
 }
 
 p {
+	font-size: 1.3rem;
 	line-height: 1.5em;
 }
 
@@ -82,21 +83,20 @@ p + p {
 /* Custom properties */
 :root {
 	/* Layout */
-	--sidebar-main-gap: 6rem;
-	--sidebar-width: 400px;
-	--main-content-width: 40%;
+	--sidebar-main-gap: 7%;
+	--sidebar-width: 20%;
+	--main-content-width: 60%;
 	/* Main content offset with respect to side bar and main content widths. */
 	--main-content-offset-from-left: calc((100% - var(--main-content-width, 40%))/2
 										+ (var(--sidebar-width, 350px))/2
 										+ (var(--sidebar-main-gap, 4rem))/2);
 
 	/* Theme */
-	--bg-color-primary: #07233b;
-	--bg-color-secondary: #082844;
-	--bg-color-tertiary: #ffffff;
-	--font-color-primary: #ffffff;
-	--font-color-secondary: #07233b;
-	--font-color-tertiary: #e85a0d;
+	--color-primary: #07233b;
+	--color-primary-light: #082844;
+	--color-secondary: #ffffff;
+	--color-secondary-transparent: hsla(0, 0%, 100%, 0.65);
+	--color-tertiary: #e85a0d;
 }
 
 /* Layout */
@@ -157,7 +157,7 @@ nav li {
 }
 
 nav li + li {
-	margin-top: 2em;
+	margin-top: 1.5em;
 }
 
 .logo {
@@ -177,21 +177,16 @@ nav li + li {
 	filter: grayscale(100%);
 }
 
-main {
-	text-align: justify;
-	font-size: 1.4rem;
-}
-
 main h2 {
-	font-size: 2em;
+	font-size: 2rem;
 	letter-spacing: 0.3em;
 }
 
-main section:not(:first-child) {
+main > section:not(:first-child) {
 	padding-top: 3em;
 }
 
-main section:not(:last-child) {
+main > section:not(:last-child) {
 	padding-bottom: 3em;
 }
 
@@ -199,24 +194,61 @@ main section:not(:last-child) {
 	padding: 3em 2em;
 }
 
-.services--grid {
+.services {
+	display: flex;
+	flex-wrap: wrap;
+
+	--services-section-padding-vertical: 3rem;
+	--services-section-padding-left: 10rem;
+}
+
+	.services > section {
+		width: 50%;
+		padding: var(--services-section-padding-vertical)
+				 3rem
+				 var(--services-section-padding-vertical)
+				 var(--services-section-padding-left);
+		position: relative;
+	}
+
+	.services h3 {
+		font-size: 1.5rem;
+		margin-top: 0.75em;
+	}
+
+	.services p {
+		color: var(--color-secondary-transparent);
+	}
+
+	.services .fa-stack {
+		font-size: 2rem;
+		position: absolute;
+		left: calc(var(--services-section-padding-left)/2.5);
+		top: calc(var(--services-section-padding-top));
+	}
+
+	.services .fa-circle {
+		color: var(--color-tertiary);
+	}
+
+/* .services--grid {
 	padding: 2rem 1rem;
-	text-align: center;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	row-gap: 3em;
 }
 
-.services--grid i {
-	font-size: 3rem;
-	padding-bottom: 0.5em;
-	color: var(--font-color-tertiary);
+.services--grid .fa-circle {
+	color: var(--color-tertiary);
 }
-
 
 .services--grid h3 {
-	font-size: 0.7em;
+	margin-bottom: 1em;
 }
+
+.services--grid p {
+	font-size: 0.8em;
+} */
 
 .socials-bar {
 	text-align: center;
@@ -243,8 +275,8 @@ input[type=text], textarea {
 
 input[type=submit] {
 	padding: 0.8rem 1rem;
-	background-color: var(--font-color-tertiary);
-	color: var(--font-color-primary);
+	background-color: var(--color-tertiary);
+	color: var(--color-secondary);
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
@@ -252,34 +284,34 @@ input[type=submit] {
 
 
 label {
-	color: var(--font-color-tertiary);
+	color: var(--color-tertiary);
 	font-size: 0.8em;
 	letter-spacing: 0.3em;
 }
 
 /* Themes */
 .bg-color-primary {
-	background-color: var(--bg-color-primary);
+	background-color: var(--color-primary);
 }
 
 .bg-color-secondary {
-	background-color: var(--bg-color-secondary);
+	background-color: var(--color-primary-light);
 }
 
 .bg-color-tertiary {
-	background-color: var(--bg-color-tertiary);
+	background-color: var(--color-secondary);
 }
 
 .font-color-primary, .font-color-primary a {
-	color: var(--font-color-primary);
+	color: var(--color-secondary);
 }
 
 .font-color-secondary {
-	color: var(--font-color-secondary);
+	color: var(--color-primary);
 }
 
 .font-color-tertiary, .font-color-tertiary a {
-	color: var(--font-color-tertiary);
+	color: var(--color-tertiary);
 }
 
 .box-shadow {
@@ -287,5 +319,5 @@ label {
 }
 
 .border-radius {
-	border-radius: 15px;
+	border-radius: 10px;
 }
