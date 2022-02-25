@@ -46,7 +46,7 @@
                         <h2 class="font-color-tertiary">SERVICES</h2>
 <!--styled-->           <p style="font-size: 2rem; text-align: center; margin-bottom: 2rem;">Technology integration and program management consulting services for...</p>
                         <div class="services box-shadow bg-color-secondary border-radius">                        
-                            <section>
+                            <section class="icon-card">
                                 <span class="fa-stack fa-2x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-handshake-o fa-stack-1x"></i>
@@ -54,7 +54,7 @@
                                 <h3>Mergers and Acquisitions</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                             </section>
-                            <section>
+                            <section class="icon-card">
                                 <span class="fa-stack fa-2x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-sitemap fa-stack-1x"></i>
@@ -62,7 +62,7 @@
                                 <h3>Supply Chains</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                             </section>
-                            <section>
+                            <section class="icon-card">
                                 <span class="fa-stack fa-2x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-gears fa-stack-1x"></i>
@@ -70,7 +70,7 @@
                                 <h3>Program Delivery Offices</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                             </section>
-                            <section>
+                            <section class="icon-card">
                                 <span class="fa-stack fa-2x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-cubes fa-stack-1x"></i>
@@ -78,7 +78,7 @@
                                 <h3>Enterprise Governance</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                             </section>
-                            <section>
+                            <section class="icon-card">
                                 <span class="fa-stack fa-2x"> 
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-code-fork fa-stack-1x"></i>
@@ -86,7 +86,7 @@
                                 <h3>Roadmap and Strategy</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                             </section>
-                            <section>
+                            <section class="icon-card">
                                 <span class="fa-stack fa-2x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-balance-scale fa-stack-1x"></i>
@@ -115,19 +115,50 @@
                 <section id="three">
                     <div class="l-main-content">
                         <h2 class="font-color-tertiary">CONTACT</h2>
-                        <form class="contact-form box-shadow bg-color-secondary border-radius">
-                            <label for="name">Name</label>
-                            <input type="text" name="name"><br>
-                            <label for="email">Email</label>
-                            <input type="text" name="email"><br>
-                            <label for="subject">Subject</label>
-                            <input type="text" name="subject"><br>
+                        <div style="display: flex;">
+                            <form style="width: 50%;" class="contact-form box-shadow bg-color-secondary border-radius">
+                                <label for="name">Name</label>
+                                <input type="text" name="name"><br>
+                                <label for="email">Email</label>
+                                <input type="text" name="email"><br>
+                                <label for="subject">Subject</label>
+                                <input type="text" name="subject"><br>
 
-                            <label for="message">Message</label>
-<!--styled-->               <textarea style="height: 100px;" name="message"></textarea>
+                                <label for="message">Message</label>
+    <!--styled-->               <textarea style="height: 100px;" name="message"></textarea>
 
-                            <input type="submit" value="Submit">
-                        </form>
+                                <input type="submit" value="Submit">
+                            </form>
+                            <div>
+                                <!-- Email -->
+                                <section class="icon-card">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-phone fa-stack-1x"></i>
+                                    </span>
+                                    <h3>Phone</h3>
+                                    <p>555-555-5555</p>
+                                </section>
+                                <!-- Phone-->
+                                <section class="icon-card">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-envelope fa-stack-1x"></i>
+                                    </span>
+                                    <h3>Email</h3>
+                                    <p>myemail@domain.com</p>
+                                </section>
+                                <!-- Address -->
+                                <section class="icon-card">
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-home fa-stack-1x"></i>
+                                    </span>
+                                    <h3>Address</h3>
+                                    <p>Miami, FL</p>
+                                </section>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
