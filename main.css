@@ -56,7 +56,12 @@ html {
 	font-family: sans-serif;
 }
 
-h2, h3 {
+h2 {
+	font-size: 2rem;
+	margin-bottom: 1em;
+}
+
+h3 {
 	font-size: 1.5rem;
 	margin-bottom: 1em;
 }
@@ -151,6 +156,10 @@ p + p {
 }
 
 /* Modules */
+.sidebar {
+	padding: 3em 2em;
+}
+
 nav li {
 	font-size: 1.5rem;
 	letter-spacing: 0.3em;
@@ -177,31 +186,46 @@ nav li + li {
 	filter: grayscale(100%);
 }
 
+main section {
+	--section-header-padding-top: 7em;
+	--section-content-verticle-offset: calc(-15rem + var(--section-header-padding-top));
+}
+
+
+main .section-header {
+	padding-top: var(--section-header-padding-top);
+	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+}
+
+main .section-content {
+	position: relative;
+	top: var(--section-content-verticle-offset);
+}
+
 main h2 {
-	font-size: 2rem;
 	letter-spacing: 0.3em;
 }
 
-main > section:not(:first-child) {
+.section-header p {
+	color: hsl(0, 0%, 85%);
+}
+
+/* main > section:not(:first-child) {
 	padding-top: 5rem;
-}
+} */
 
-main > section:not(:last-child) {
+/* main > section:not(:last-child) {
 	padding-bottom: 5rem;
-}
+} */
 
-.sidebar {
-	padding: 3em 2em;
-}
-
-.services {
+.services-table {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-	.services > section {
-		width: 50%;
-	}
+.services-table > * {
+	width: 50%;
+}
 
 .icon-card {
 	--services-section-padding-vertical: 3rem;
@@ -229,36 +253,15 @@ main > section:not(:last-child) {
 		color: var(--color-secondary-transparent);
 	}
 
-/* .services--grid {
-	padding: 2rem 1rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	row-gap: 3em;
-}
-
-.services--grid .fa-circle {
-	color: var(--color-tertiary);
-}
-
-.services--grid h3 {
-	margin-bottom: 1em;
-}
-
-.services--grid p {
-	font-size: 0.8em;
-} */
-
 .socials-bar {
-	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 	font-size: 3em;
 }
 
-.socials-bar > *:not(:last-child) {
-	margin-right: 0.5em;
-}
-
 .contact-form {
-	padding: 1em 2em;
+	padding: 2em 3em;
 }
 
 input[type=text], textarea {
@@ -282,7 +285,6 @@ input[type=submit] {
 
 
 label {
-	color: var(--color-tertiary);
 	font-size: 0.8em;
 	letter-spacing: 0.3em;
 }
@@ -320,6 +322,19 @@ label {
 	border-radius: 10px;
 }
 
+.border-top {
+	border-top: var(--color-tertiary) solid 5px;
+}
+
 .fa-circle {
 	color: var(--color-tertiary);
+}
+
+.parallax {
+	background-image: url("images/parallax.jpg");
+	min-height: 400px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
