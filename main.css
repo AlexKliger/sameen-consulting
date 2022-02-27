@@ -155,6 +155,16 @@ p + p {
 	padding-right: 1em;
 }
 
+.l-float-right {
+	float: right;
+	padding-left: 1em;
+}
+
+.l-aspect-ratio {
+	display: block;
+	height: auto;
+}
+
 /* Modules */
 .sidebar {
 	padding: 3em 2em;
@@ -179,9 +189,9 @@ nav li + li {
 
 .profile-img {
 	display: block;
-	width: 175px;
-	margin: 0 auto;
 	height: auto;
+	margin: 0 auto;
+	width: 175px;
 	border-radius: 50%;
 	filter: grayscale(100%);
 }
@@ -208,15 +218,8 @@ main h2 {
 
 .section-header p {
 	color: hsl(0, 0%, 85%);
+	padding-left: 2em;
 }
-
-/* main > section:not(:first-child) {
-	padding-top: 5rem;
-} */
-
-/* main > section:not(:last-child) {
-	padding-bottom: 5rem;
-} */
 
 .services-table {
 	display: flex;
@@ -259,6 +262,21 @@ main h2 {
 	justify-content: space-around;
 	font-size: 3em;
 }
+
+.clients-bar {
+	display: flex;
+	justify-content: space-around;
+	margin: 4rem 0;
+}
+
+	.clients-bar img {
+		margin: auto 0; /* Prevents vertical stretching that flex box causes. */
+		width: 175px;
+	}
+
+	.client-bar > * {
+		flex-basis: 1;
+	}
 
 .contact-form {
 	padding: 2em 3em;
