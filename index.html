@@ -46,7 +46,7 @@
                     <!-- Section header -->
                     <div class="section-header parallax">
                         <div class="l-main-content">
-                            <h2 class="font-color-tertiary">SERVICES</h2>
+                            <h2 class="font-color-tertiary">Services</h2>
 <!--styled-->               <p style="font-size: 2rem; margin-bottom: 2rem;">Technology integration and program management consulting services for...</p>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                 <!-- About -->
                 <section id="about" class="bg-color-tertiary font-color-secondary">
                     <div class="l-main-content l-vertical-padding">
-                        <h2 class="font-color-tertiary">ABOUT</h2>
+                        <h2 class="font-color-tertiary">About</h2>
 <!--styled-->           <p style="margin-bottom: 2em;">Sameen Integration Technology Consulting is passionate about helping business partners meet their goals and objectives in the most efficient and effective manner with a sense of urgency, commitment and accountability.</p>
 
                         <div style="margin-bottom: 2em;" class="clearfix">
@@ -144,55 +144,64 @@
                 <section id="contact">
                     <div class="section-header parallax">
                         <div class="l-main-content">
-                            <h2 class="font-color-tertiary">CONTACT</h2>
+                            <h2 class="font-color-tertiary">Contact</h2>
 <!--styled-->               <p style="font-size: 2rem; margin-bottom: 2rem;">Get in touch...</p>
                         </div>
                     </div>
                     <div class="l-main-content">
-<!--styled-->           <div class="section-content">
+                       <div class="section-content">
                             <form class="contact-form box-shadow bg-color-secondary border-top border-radius">
-                                <label for="name">Name</label>
-                                <input type="text" name="name"><br>
-                                <label for="email">Email</label>
-                                <input type="text" name="email"><br>
-                                <label for="subject">Subject</label>
-                                <input type="text" name="subject"><br>
-
-                                <label for="message">Message</label>
-<!--styled-->                   <textarea style="height: 100px;" name="message"></textarea>
-
+                                <div class="l-flex-row">
+                                    <div>
+                                        <label for="name">Name</label>
+                                        <input type="text" name="name"><br>
+                                        <label for="email">Email</label>
+                                        <input type="text" name="email"><br>
+                                        <label for="subject">Subject</label>
+                                        <input type="text" name="subject"><br>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="message">Message</label>
+<!--styled-->                           <textarea style="height: 100%;" name="message"></textarea>
+                                    </div>
+                                </div>
+                                
                                 <input type="submit" value="Submit">
                             </form>
-                            <div style="display: flex;">
-                                <!-- Email -->
-                                <section class="icon-card">
-                                    <span class="fa-stack fa-2x">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-phone fa-stack-1x"></i>
-                                    </span>
-                                    <h3>555-555-5555</h3>
-                                </section>
-                                <!-- Phone-->
-                                <section class="icon-card">
-                                    <span class="fa-stack fa-2x">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-envelope fa-stack-1x"></i>
-                                    </span>
-                                    <h3>myemail@domain.com</h3>
-                                </section>
-                                <!-- Address -->
-                                <section class="icon-card">
-                                    <span class="fa-stack fa-2x">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-home fa-stack-1x"></i>
-                                    </span>
-                                    <h3>Miami, FL</h3>
-                                </section>
-                            </div>
                         </div>
                     </div>
                 </section>
             </main>
+            
+            <footer style="background-color: #13201e">
+                <div class="l-flex-row l-main-content">
+                    <!-- Email -->
+                    <section class="icon-card">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-phone fa-stack-1x"></i>
+                        </span>
+                        <h3>555-555-5555</h3>
+                    </section>
+                    <!-- Phone-->
+                    <section class="icon-card">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope fa-stack-1x"></i>
+                        </span>
+                        <h3>myemail@domain.com</h3>
+                    </section>
+                    <!-- Address -->
+                    <section class="icon-card">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-map-marker fa-stack-1x"></i>
+                        </span>
+                        <h3>Miami, FL</h3>
+                    </section>
+                </div>
+            </footer>
         </div>
 
         <script src="scrollToAnchor.js"></script>
