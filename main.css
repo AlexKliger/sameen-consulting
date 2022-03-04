@@ -211,7 +211,7 @@ nav a:hover {
 
 main section {
 	--section-header-padding-top: 7em;
-	--section-content-verticle-offset: calc(-11rem + var(--section-header-padding-top));
+	--section-content-verticle-offset: calc(-13rem + var(--section-header-padding-top));
 }
 
 
@@ -239,10 +239,16 @@ main h2 {
 .services-table {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 1rem;
 }
 
-.services-table > * {
-	width: 50%;
+.services-table > section {
+	width: 45%;
+}
+
+.services-table section:nth-child(2n) {
+	position: relative;
+	top: 3rem;
 }
 
 .icon-card {
