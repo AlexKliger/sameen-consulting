@@ -53,7 +53,7 @@ table {
 
 /* Typography */
 html {
-	font-family: sans-serif;
+	font-family: "Verdana";
 }
 
 h2 {
@@ -101,7 +101,8 @@ p + p {
 	--color-primary-light: #082844;
 	--color-secondary: #ffffff;
 	--color-secondary-transparent: hsla(0, 0%, 100%, 0.65);
-	--color-tertiary: #e85a0d;
+	--color-tertiary: #e75a0d;
+	--color-tertiary-light:  hsla(21, 89%, 70%);
 }
 
 /* Layout */
@@ -183,6 +184,14 @@ nav li + li {
 	margin-top: 1.5em;
 }
 
+nav a {
+	color: var(--color-tertiary);
+}
+
+nav a:hover {
+	color: var(--color-tertiary-light);
+}
+
 .logo {
 	letter-spacing: 0.3em;
 	line-height: 1.25;
@@ -202,7 +211,7 @@ nav li + li {
 
 main section {
 	--section-header-padding-top: 7em;
-	--section-content-verticle-offset: calc(-15rem + var(--section-header-padding-top));
+	--section-content-verticle-offset: calc(-11rem + var(--section-header-padding-top));
 }
 
 
@@ -223,6 +232,8 @@ main h2 {
 .section-header p {
 	color: hsl(0, 0%, 85%);
 	padding-left: 2em;
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
 }
 
 .services-table {
@@ -239,7 +250,8 @@ main h2 {
 	--services-section-padding-left: 10rem;
 
 	position: relative;
-	padding: var(--services-section-padding-vertical)
+	padding:
+	var(--services-section-padding-vertical)
 	3rem
 	var(--services-section-padding-vertical)
 	var(--services-section-padding-left);
@@ -253,7 +265,6 @@ main h2 {
 		position: absolute;
 		left: calc(var(--services-section-padding-left)/2.5);
 		top: calc(var(--services-section-padding-top));
-		font-size: 1.8rem;
 	}
 
 	.icon-card p {
@@ -319,7 +330,7 @@ label {
 	background-color: var(--color-secondary);
 }
 
-.font-color-primary, .font-color-primary a {
+.font-color-primary {
 	color: var(--color-secondary);
 }
 
@@ -327,7 +338,7 @@ label {
 	color: var(--color-primary);
 }
 
-.font-color-tertiary, .font-color-tertiary a {
+.font-color-tertiary {
 	color: var(--color-tertiary);
 }
 
@@ -354,4 +365,8 @@ label {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.is-active {
+	color: var(--color-tertiary-light);
 }
