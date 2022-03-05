@@ -75,9 +75,9 @@ p {
 	line-height: 1.5em;
 }
 
-p + p {
+/* p + p {
 	margin-top: 2em;
-}
+} */
 
 .clearfix:after {
 	content: "";
@@ -129,6 +129,15 @@ p + p {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.l-flex-row.l-flex-two-column {
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.l-flex-two-column > *{
+	width: 45%;
 }
 
 .l-vertical-margin {
@@ -186,6 +195,7 @@ nav li + li {
 
 nav a {
 	color: var(--color-tertiary);
+	transition: color 0.5s;
 }
 
 nav a:hover {
@@ -236,14 +246,8 @@ main h2 {
 	margin-bottom: 2rem;
 }
 
-.services-table {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-}
-
-.services-table > section {
-	width: 45%;
+.services-table p {
+	color: var(--color-secondary-transparent);
 }
 
 .services-table section:nth-child(2n) {
@@ -271,10 +275,6 @@ main h2 {
 		position: absolute;
 		left: calc(var(--services-section-padding-left)/2.5);
 		top: calc(var(--services-section-padding-top));
-	}
-
-	.icon-card p {
-		color: var(--color-secondary-transparent);
 	}
 
 .socials-bar {
@@ -342,6 +342,10 @@ label {
 
 .font-color-secondary {
 	color: var(--color-primary);
+}
+
+.font-color-secondary-transparent {
+	color: var(--color-secondary-transparent);
 }
 
 .font-color-tertiary {
