@@ -136,8 +136,13 @@ p {
 	gap: 1rem;
 }
 
-.l-flex-two-column > *{
-	width: 45%;
+.l-flex-two-column > * {
+	width: 49%;
+}
+
+.l-flex-two-column > *:nth-child(2n) {
+	position: relative;
+	top: 3rem;
 }
 
 .l-vertical-margin {
@@ -250,31 +255,25 @@ main h2 {
 	color: var(--color-secondary-transparent);
 }
 
-.services-table section:nth-child(2n) {
-	position: relative;
-	top: 3rem;
-}
-
 .icon-card {
-	--services-section-padding-vertical: 3rem;
-	--services-section-padding-left: 10rem;
+	--icon-card-padding-vertical: 3rem;
+	--icon-card-padding-left: 10rem;
 
 	position: relative;
 	padding:
-	var(--services-section-padding-vertical)
+	var(--icon-card-padding-vertical, 0)
 	3rem
-	var(--services-section-padding-vertical)
-	var(--services-section-padding-left);
+	var(--icon-card-padding-vertical, 0)
+	var(--icon-card-padding-left, 0);
 }
 
 	.icon-card h3 {
 		margin-top: 0.75em;
 	}
 
-	.icon-card .fa-stack {
+	.icon-card span { /* Consider creating separate class instead of span. */
 		position: absolute;
-		left: calc(var(--services-section-padding-left)/2.5);
-		top: calc(var(--services-section-padding-top));
+		left: calc(var(--icon-card-padding-left)/2.5);
 	}
 
 .socials-bar {
