@@ -85,6 +85,10 @@ p {
 	clear: both;
 }
 
+img {
+	object-fit: contain; /* Needed to maintain img aspect ratio in flex box. */
+}
+
 /* Custom properties */
 :root {
 	/* Layout */
@@ -133,10 +137,10 @@ p {
 
 .l-flex-row.l-flex-two-column {
 	flex-wrap: wrap;
-	gap: 1rem;
+	gap: 16px;
 }
 
-.l-flex-two-column > * {
+.l-flex-row.l-flex-two-column > * {
 	width: 49%;
 }
 
@@ -255,6 +259,31 @@ main h2 {
 	color: var(--color-secondary-transparent);
 }
 
+.about-details {
+	padding-top: 4rem;
+}
+
+	.about-details img {
+		position: absolute;
+		top: 50%;
+		right: 1rem;
+		transform: translateY(-50%);
+		width: 200px;
+		filter: grayscale(100%);
+	}
+
+	.about-details .background {
+		position: absolute;
+		right: 3rem;
+		width: 70%;
+		height: 100%;
+	}
+
+	.about-details p {
+		margin: 2rem 0 6rem 0;
+		text-align: justify;
+	}
+
 .icon-card {
 	--icon-card-padding-vertical: 3rem;
 	--icon-card-padding-left: 10rem;
@@ -271,9 +300,30 @@ main h2 {
 		margin-top: 0.75em;
 	}
 
-	.icon-card span { /* Consider creating separate class instead of span. */
+	.icon-card .fa-stack { /* Consider creating separate class instead of span. */
 		position: absolute;
 		left: calc(var(--icon-card-padding-left)/2.5);
+	}
+
+.client-card {
+	padding: 2rem 3rem 2rem 3rem;
+	display: flex;
+	gap: 1rem;
+}
+
+	.client-card img {
+		max-width: 150px;
+	}
+
+	.client-card ul {
+		list-style-type: square;
+		padding-left: 10%;
+		font-size: 1rem;
+		color: var(--color-tertiary);
+	}
+
+	.client-card span {
+		color: var(--color-primary);
 	}
 
 .socials-bar {
@@ -327,7 +377,7 @@ label {
 	background-color: var(--color-primary);
 }
 
-.bg-color-secondary {
+.bg-color-primary-light {
 	background-color: var(--color-primary-light);
 }
 

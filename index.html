@@ -12,7 +12,7 @@
     <body class="bg-color-primary font-color-primary">
         <!-- Fixed sidebar -->
         <aside style="align-items: center;" class="l-sidebar l-flex-row">
-            <div class="sidebar box-shadow border-top border-radius bg-color-secondary">
+            <div class="sidebar box-shadow border-top border-radius bg-color-primary-light">
                 <header>
                     <h1 class="logo font-color-tertiary">Temporary Logo</h1>
                     <img class="profile-img" src="images/profile.jpg" alt="Wamiz Sameen">
@@ -53,7 +53,7 @@
                 <div class="l-main-content">
                     <!-- Services table -->
                     <div class="l-flex-row l-flex-two-column services-table section-content">                        
-                        <section class="icon-card box-shadow bg-color-secondary border-top border-radius">
+                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
                             <span class="fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-handshake-o fa-stack-1x"></i>
@@ -61,7 +61,7 @@
                             <h3>Mergers and Acquisitions</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-secondary border-top border-radius">
+                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
                             <span class="fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-sitemap fa-stack-1x"></i>
@@ -69,7 +69,7 @@
                             <h3>Supply Chains</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-secondary border-top border-radius">
+                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
                             <span class="fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-gears fa-stack-1x"></i>
@@ -77,7 +77,7 @@
                             <h3>Program Delivery Offices</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-secondary border-top border-radius">
+                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
                             <span class="fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-cubes fa-stack-1x"></i>
@@ -85,7 +85,7 @@
                             <h3>Enterprise Governance</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-secondary border-top border-radius">
+                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
                             <span class="fa-stack fa-2x"> 
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-code-fork fa-stack-1x"></i>
@@ -93,7 +93,7 @@
                             <h3>Roadmap and Strategy</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla odit repellat facilis maxime, tempore suscipit nihil error, itaque dicta consequatur modi et?</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-secondary border-top border-radius">
+                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
                             <span class="fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-balance-scale fa-stack-1x"></i>
@@ -118,30 +118,36 @@
                     <!-- Clients -->
                     <div style="justify-content: space-between;" class="l-flex-column bg-color-tertiary box-shadow border-radius border-top">
                       <div class="client-card">
-                        <img style="width: 150px;" src="https://scontent.ffxe1-1.fna.fbcdn.net/v/t39.8562-6/252294889_575082167077436_6034106545912333281_n.svg/meta-logo-primary_standardsize.svg?_nc_cat=108&ccb=1-5&_nc_sid=ad8a9d&_nc_ohc=_OtFmreh_wIAX_D4Wyr&_nc_ht=scontent.ffxe1-1.fna&oh=00_AT9K_ogz_k0IkzYAC-mckD4URg9mUdBJsuCou6VQSUJbnQ&oe=6226E039">
+                        <img src="https://scontent.ffxe1-1.fna.fbcdn.net/v/t39.8562-6/252294889_575082167077436_6034106545912333281_n.svg/meta-logo-primary_standardsize.svg?_nc_cat=108&ccb=1-5&_nc_sid=ad8a9d&_nc_ohc=_OtFmreh_wIAX_D4Wyr&_nc_ht=scontent.ffxe1-1.fna&oh=00_AT9K_ogz_k0IkzYAC-mckD4URg9mUdBJsuCou6VQSUJbnQ&oe=6226E039">
+                        <div class="client-card--content">
                           <h3>Program Executive for Meta Reality Labs</h3>
+                            <ul>
+                              <li><span>Product lifecycle management</span></li>
+                              <li><span>Global trade compliance</span></li>
+                              <li><span>Dangerous goods management</span></li>
+                              <li><span>Data management</span></li>
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="client-card">
+                        <img src="https://content.fortune.com/wp-content/uploads/2021/03/workplaces_financial_services_insurance.jpg">
+                        <div class="client-card--content">
+                          <h3>Program Executive for Fortune 100 Insurance</h3>
                           <ul>
-                            <li>Product lifecycle management</li>
-                            <li>Global trade compliance</li>
-                            <li>Dangerous goods management</li>
-                            <li>Data management</li>
+                            <li><span>Program management oversight</span></li>
+                            <li><span>Delivery office responsibilities</span></li>
                           </ul>
+                        </div>
                       </div>
                       <div class="client-card">
-                        <img style="width: 150px" src="https://content.fortune.com/wp-content/uploads/2021/03/workplaces_financial_services_insurance.jpg">
-                        <h3>Program Executive for Fortune 100 Insurance</h3>
-                        <ul>
-                          <li>Program management oversight</li>
-                          <li>Delivery office responsibilities</li>
-                        </ul>
-                      </div>
-                      <div class="client-card">
-                        <img style="width: 150px" src="https://media-exp1.licdn.com/dms/image/C560BAQE1piekrmxLQA/company-logo_200_200/0/1519856944140?e=1654732800&v=beta&t=pMmFJVliDtzEwavHZfMir4ekk3bEVFdkVIghtMIHQKs">
-                        <h3>Head of PMO for M&A Technology</h3>
-                        <ul>
-                          <li>Established IT operations</li>
-                          <li>Rolledout comprehensive ERP system</li>
-                        </ul>
+                        <img src="https://media-exp1.licdn.com/dms/image/C560BAQE1piekrmxLQA/company-logo_200_200/0/1519856944140?e=1654732800&v=beta&t=pMmFJVliDtzEwavHZfMir4ekk3bEVFdkVIghtMIHQKs">
+                        <div clas="client-card--content">
+                          <h3>Head of PMO for M&A Technology</h3>
+                          <ul>
+                            <li><span>Established IT operations</span></li>
+                            <li><span>Rolledout comprehensive ERP system</span></li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
 
@@ -174,13 +180,17 @@
                         
                     </div>
                   </div>
-                  
-                  <div class="l-vertical-padding clearfix">
-                      <img class="l-float-left profile-img" src="images/profile2.jpg" alt="Wamiz Sameen">
-                      <p><span class="font-color-tertiary">Wamiz Sameen</span>, founder and managing director of Sameen Integration Technology Consulting, is an accomplished executive leader, respected as a strong executor and team builder. He leads by example, has a “Can-do” attitude and has delivered several complex and visible information technology initiatives for multiple Fortune 500 companies. During his 20 years of professional experience, Wamiz has built high performing global integration management offices and achieved proven results.</p>
-                  </div>
                 </div>
                 
+                <!-- Detailed about -->
+                <div class="about-details l-main-content section-content l-flex-row l-flex-two-column">
+                  <div style="position: relative">
+                    <div class="background bg-color-primary-light"></div>
+                    <img class="box-shadow" src="images/profile2.jpg" alt="Wamiz Sameen">
+                  </div>
+                  <p><span class="font-color-tertiary">Wamiz Sameen</span>, founder and managing director of Sameen Integration Technology Consulting, is an accomplished executive leader, respected as a strong executor and team builder. He leads by example, has a “Can-do” attitude and has delivered several complex and visible information technology initiatives for multiple Fortune 500 companies. During his 20 years of professional experience, Wamiz has built high performing global integration management offices and achieved proven results.</p>
+                </div>
+
             </section>
 
             <!-- Contact -->
@@ -193,7 +203,7 @@
                 </div>
                 <div class="l-main-content">
                     <div class="section-content">
-                        <form class="contact-form box-shadow bg-color-secondary border-top border-radius">
+                        <form class="contact-form box-shadow bg-color-primary-light border-top border-radius">
                             <div class="l-flex-row">
                                 <div>
                                     <label for="name">Name</label>
