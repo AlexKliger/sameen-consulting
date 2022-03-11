@@ -75,10 +75,6 @@ p {
 	line-height: 1.5em;
 }
 
-/* p + p {
-	margin-top: 2em;
-} */
-
 .clearfix:after {
 	content: "";
 	display: table;
@@ -110,6 +106,12 @@ img {
 }
 
 /* Layout */
+html {
+	/* Disables horizontal scrolling. Needed as a hardfix to scrolling caused by animations. */
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
 .l-main-content {
 	max-width: var(--main-content-width);
 	margin: 0 auto 0 var(--main-content-offset-from-left);
@@ -428,4 +430,76 @@ label {
 
 .is-active {
 	color: var(--color-tertiary-light);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.animation-fade-in {
+		animation-name: fade-in;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+	}
+
+	.animation-slide-from-left {
+		animation-name: slide-from-left;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+	}
+
+	.animation-slide-from-right {
+		animation-name: slide-from-right;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+	}
+
+	.animation-slide-from-bottom {
+		animation-name: slide-from-bottom;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slide-from-left {
+	from {
+		transform: translateX(-25%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-from-right {
+	from {
+		transform: translateX(25%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-from-bottom {
+	from {
+		transform: translateY(25%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
