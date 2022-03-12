@@ -103,6 +103,8 @@ img {
 	--color-secondary-transparent: hsla(0, 0%, 100%, 0.65);
 	--color-tertiary: #e75a0d;
 	--color-tertiary-light:  hsla(21, 89%, 70%);
+	/* Animation */
+	--animation-duration: 1s;
 }
 
 /* Layout */
@@ -286,6 +288,10 @@ main h2 {
 		text-align: justify;
 	}
 
+.about-image {
+	position: relative;
+}
+
 .icon-card {
 	--icon-card-padding-vertical: 3rem;
 	--icon-card-padding-left: 10rem;
@@ -306,6 +312,10 @@ main h2 {
 		position: absolute;
 		left: calc(var(--icon-card-padding-left)/2.5);
 	}
+
+.clients-table {
+	justify-content: space-between;
+}
 
 .client-card {
 	padding: 2rem 3rem 2rem 3rem;
@@ -433,39 +443,78 @@ label {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	.animation-fade-in {
-		animation-name: fade-in;
-		animation-duration: 2s;
-		animation-iteration-count: 1;
-	}
-
-	.animation-slide-from-left {
-		animation-name: slide-from-left;
-		animation-duration: 2s;
-		animation-iteration-count: 1;
-	}
-
-	.animation-slide-from-right {
-		animation-name: slide-from-right;
-		animation-duration: 2s;
-		animation-iteration-count: 1;
-	}
-
-	.animation-slide-from-bottom {
+	p.animate {
 		animation-name: slide-from-bottom;
-		animation-duration: 2s;
+		animation-duration: var(--animation-duration);
 		animation-iteration-count: 1;
 	}
-}
 
-@keyframes fade-in {
-	from {
-		opacity: 0;
+	.sidebar.animate {
+		animation-name: slide-from-left;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
 	}
 
-	to {
-		opacity: 1;
+	.sidebar.animate .logo, .sidebar.animate img, .sidebar.animate h3 {
+		animation-name: slide-from-top;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
 	}
+
+	.sidebar.animate nav, .sidebar.animate footer, .sidebar.animate p {
+		animation-name: slide-from-bottom;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
+	.services-table.animate {
+		animation-name: slide-from-right;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
+	.clients-table.animate {
+		animation-name: slide-from-left;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
+	.values-table.animate {
+		animation-name: slide-from-right;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
+	.about-details.animate .about-image {
+		animation-name: slide-from-left;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
+	.about-details.animate p {
+		animation-name: slide-from-right;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
+	.contact-form.animate {
+		animation-name: slide-from-bottom;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
+	.section-header.animate > * {
+		animation-name: slide-from-bottom;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
+	footer.animate .icon-card {
+		animation-name: slide-from-right;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
 }
 
 @keyframes slide-from-left {
@@ -488,6 +537,19 @@ label {
 
 	to {
 		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+
+@keyframes slide-from-top {
+	from {
+		transform: translateY(-25%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
 		opacity: 1;
 	}
 }
