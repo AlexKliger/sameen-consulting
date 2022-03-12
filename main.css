@@ -88,13 +88,13 @@ img {
 /* Custom properties */
 :root {
 	/* Layout */
-	--sidebar-main-gap: 7%;
 	--sidebar-width: 20%;
+	--gap: 7%;
 	--main-content-width: 60%;
-	/* Main content offset with respect to side bar and main content widths. */
-	--main-content-offset-from-left: calc((100% - var(--main-content-width, 40%))/2
-										+ (var(--sidebar-width, 350px))/2
-										+ (var(--sidebar-main-gap, 4rem))/2);
+	--remaining-space: calc(100% - var(--sidebar-width) - var(--gap) - var(--main-content-width));
+	/* Determine how the main content should be positioned based off of the sidebar-width,
+	gap, and main-content-width. */
+	--main-content-margin-left: calc(var(--sidebar-width, 20%) + var(--gap, 7%) + var(--remaining-space, 13%)/2);
 
 	/* Theme */
 	--color-primary: #07233b;
@@ -107,6 +107,14 @@ img {
 	--animation-duration: 1s;
 }
 
+@media only screen and (max-width: 1400px) {
+	:root {
+		--gap: 0;
+		--main-content-width: 80%;
+		--main-content-margin-left: 0;
+	}
+}
+
 /* Layout */
 html {
 	/* Disables horizontal scrolling. Needed as a hardfix to scrolling caused by animations. */
@@ -116,17 +124,17 @@ html {
 
 .l-main-content {
 	max-width: var(--main-content-width);
-	margin: 0 auto 0 var(--main-content-offset-from-left);
+	margin: 0 auto 0 calc(var(--main-content-margin-left));
 }
 
 .l-sidebar {
 	position: fixed;
 	/* Calculate offset from the left with respect to offset from left of main content. */
-	left: calc(var(--main-content-offset-from-left, 60%)
-		- var(--sidebar-width, 350px)
-		- var(--sidebar-main-gap, 3em));
+	left: calc(var(--main-content-margin-left, 60%)
+		- var(--sidebar-width, 350px) - var(--remaining-space)/2);
 	width: var(--sidebar-width, 350px);
 	height: 100vh;
+	transition: 0.75s;
 }
 
 .l-flex-row {
@@ -177,19 +185,26 @@ html {
 	margin-bottom: 7em;
 }
 
-.l-float-left {
-	float: left;
-	padding-right: 1em;
-}
-
-.l-float-right {
-	float: right;
-	padding-left: 1em;
-}
-
 .l-aspect-ratio {
 	display: block;
 	height: auto;
+}
+
+@media only screen and (max-width: 1400px) {
+	.l-main-content {
+		margin: 0 auto;
+	}
+
+	.l-sidebar {
+		transform: translateX(-200%);
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.l-flex-row.l-flex-two-column > * {
+		width: 100%;
+		position: static;
+	}
 }
 
 /* Modules */
@@ -208,7 +223,7 @@ nav li + li {
 
 nav a {
 	color: var(--color-tertiary);
-	transition: color 0.5s;
+	transition: color 1s;
 }
 
 nav a:hover {
