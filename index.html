@@ -11,33 +11,30 @@
 
     <body class="bg-color-primary font-color-primary">
         <!-- Fixed sidebar -->
-        <button style="display: none; background-color: transparent; position: absolute; top: 3rem; left: 3rem; font-size: 2rem; color: var(--color-secondary)" class="sidebar-toggle-btn border-radius"><i class="fa fa-bars"></i></button>
-        <aside style="align-items: center;" class="l-sidebar l-flex-row">
-            <div class="sidebar animated box-shadow border-top border-radius bg-color-primary-light">
-                <header>
-                    <h1 class="logo font-color-tertiary">Temporary Logo</h1>
-                    <img class="profile-img" src="images/profile.jpg" alt="Wamiz Sameen">
-<!--styled-->       <h3 style="text-align: center;" class="l-margin-top">Wamiz Sameen</h3>
-<!--styled-->       <p style="line-height: 1.8em; font-size: 0.9em; text-align: center">Executive Leader | Program Management Officer | Information Technology | Mergers & Acquisition | Supply Chain | Digital Transformation | Technology Integration Management | PMP, Scrum Master & CGEIT certified</p>
-<!--styled-->       <nav style="text-align: right;" class="l-margin-top-low">
-                        <ul class="nav-list font-color-tertiary">
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </header>
-            
+        <button style="background-color: transparent; position: absolute; top: 3rem; left: 3rem; font-size: 2rem; color: var(--color-secondary)" class="sidebar-toggle-btn border-radius" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
+        <div class="opaque-overlay" onclick="toggleSidebar()"></div>
+        <div style="align-items: center;" class="l-sidebar is-responsive l-flex-row">
+            <header class="sidebar l-flex-column animated box-shadow border-top border-radius bg-color-primary-light">
+                <h1 class="logo font-color-tertiary">Temporary Logo</h1>
+                <div>
+                    <img style="margin-bottom: 1.5rem;" class="profile-img" src="images/profile.jpg" alt="Wamiz Sameen">
+                    <h3>Wamiz Sameen</h3>
+                </div>
+                <nav class="nav-primary">
+                    <ul class="font-color-tertiary">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
 
-                <footer class="l-margin-top-low">
-                    <div class="socials-bar">
-                        <a href="#" class="font-color-primary"><i class="fa fa-facebook-square"></i></a>
-                        <a href="#" class="font-color-primary"><i class="fa fa-twitter-square"></i></a>
-                        <a href="#" class="font-color-primary"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </footer>
-            </div>
-        </aside>
+                <nav class="nav-socials">
+                    <a href="#" class="font-color-primary"><i class="fa fa-facebook-square"></i></a>
+                    <a href="#" class="font-color-primary"><i class="fa fa-twitter-square"></i></a>
+                    <a href="#" class="font-color-primary"><i class="fa fa-linkedin-square"></i></a>
+                </nav>
+            </header>
+        </div>
 
         <!-- Main content -->
         <main>
@@ -263,6 +260,7 @@
         <script src="scrollToAnchor.js"></script>
         <script src="onScroll.js"></script>
         <script src="intersectionObserver.js"></script>
+        <script src="sidebar.js"></script>
 
     </body>
 </html>

@@ -101,24 +101,22 @@ img {
 }
 
 /* Layout */
-html {
-	/* Disables horizontal scrolling. Needed as a hardfix to scrolling caused by animations. */
-	max-width: 100%;
+html, body {
+	/* Disables horizontal scrolling. No idea where the extra space comes from. */
 	overflow-x: hidden;
 }
 
 .l-main-content {
 	padding: 0 5% 5% var(--sidebar-width);
-	transition: 1s ease-in;
 }
 
 .l-sidebar {
 	position: fixed;
 	left: 0;
 	top: 0;
-	max-width: var(--sidebar-width, 350px);
+	width: var(--sidebar-width, 350px);
 	height: 100vh;
-	
+	z-index: 1;
 	transition: 1s ease-in;
 }
 
@@ -158,8 +156,9 @@ html {
 	.l-main-content {
 		padding: 0 5%;
 	}
-	.l-sidebar {
+	.l-sidebar.is-responsive {
 		transform: translateX(calc(-1*var(--sidebar-width)));
+		max-width: var(--sidebar-width);
 	}
 }
 
@@ -173,8 +172,21 @@ html {
 /* Modules */
 .sidebar {
 	max-width: 80%;
+	min-height: 90%;
 	margin: 0 auto;
 	padding: 3em 2em;
+	text-align: center;
+}
+
+.nav-socials {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 3rem;
+}
+
+.nav-primary {
+	text-align: right;
 }
 
 nav li {
@@ -183,7 +195,7 @@ nav li {
 }
 
 nav li + li {
-	margin-top: 1.5em;
+	margin-top: 1.5rem;
 }
 
 nav a {
@@ -196,11 +208,9 @@ nav a:hover {
 }
 
 .logo {
-	letter-spacing: 0.3em;
 	line-height: 1.25;
 	font-size: 2.2em;
 	text-align: center;
-	margin-bottom: 2rem;
 }
 
 .profile-img {
@@ -318,12 +328,6 @@ main h2 {
 		color: var(--color-primary);
 	}
 
-.socials-bar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	font-size: 3em;
-}
 
 .contact-form {
 	padding: 2em 3em;
@@ -416,6 +420,18 @@ label {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.opaque-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+	background-color: hsla(0, 0%, 0%, 0.5);
 }
 
 .is-active {
