@@ -51,19 +51,45 @@ table {
 	     box-sizing: border-box;
 }
 
+/* Custom properties */
+:root {
+	/* Layout */
+	--sidebar-width: 30rem;
+	/* Theme */
+	--color-primary: #07233b;
+	--color-primary-light: #082844;
+	--color-secondary: #ffffff;
+	--color-secondary-transparent: hsla(0, 0%, 100%, 0.65);
+	--color-tertiary: #e75a0d;
+	--color-tertiary-light:  hsla(21, 89%, 70%);
+	/* Font */
+	--font-size-small: 16px;
+	--font-size-medium: 18px;
+	--font-size-large: 24px;
+	--font-size-icon: 32px;
+	--font-size-header: 48px;
+	/* Animation */
+	--animation-duration: 1s;
+}
+
 /* Typography */
 html {
 	font-family: "Verdana";
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: var(--font-size-header);
 	margin-bottom: 1em;
 }
 
 h3 {
-	font-size: 1.5rem;
+	font-size: var(--font-size-large);
 	margin-bottom: 1em;
+}
+
+p {
+	font-size: var(--font-size-medium);
+	line-height: 1.4em;
 }
 
 a {
@@ -80,24 +106,6 @@ img {
 	object-fit: contain; /* Needed to maintain img aspect ratio in flex box. */
 }
 
-/* Custom properties */
-:root {
-	/* Layout */
-	--sidebar-width: 30rem;
-	/* Theme */
-	--color-primary: #07233b;
-	--color-primary-light: #082844;
-	--color-secondary: #ffffff;
-	--color-secondary-transparent: hsla(0, 0%, 100%, 0.65);
-	--color-tertiary: #e75a0d;
-	--color-tertiary-light:  hsla(21, 89%, 70%);
-	/* Font */
-	--font-size-small: 16px;
-	--font-size-medium: 18px;
-	--font-size-large: 20px;
-	/* Animation */
-	--animation-duration: 1s;
-}
 
 /* Layout */
 html, body {
@@ -228,12 +236,13 @@ main h2 {
 .section-header p {
 	color: hsl(0, 0%, 85%);
 	padding-left: 2em;
-	font-size: 1.5rem;
 	margin-bottom: 2rem;
+	font-size: var(--font-size-large);
 }
 
 .services-table p {
 	color: var(--color-secondary-transparent);
+	font-size: var(--font-size-large);
 }
 
 .about-details {
@@ -280,6 +289,11 @@ main h2 {
 	.icon-card .fa-stack {
 		position: absolute;
 		left: calc(var(--icon-card-padding-left)/2.5);
+		font-size: var(--font-size-icon);
+	}
+
+	.icon-card p {
+		font-size: var(--font-size-small);
 	}
 
 	.icon-card h3 {
@@ -456,8 +470,10 @@ label {
 @media only screen and (max-width: 500px) {
 	:root {
 		--font-size-small: 14px;
-		--font-size-meduim: 16px;
-		--font-size-large: 18px;
+		--font-size-medium: 16px;
+		--font-size-large: 20px;
+		--font-size-icon: 26px;
+		--font-size-header: 32px;
 	}
 
 	.about-details.l-flex-two-column {
