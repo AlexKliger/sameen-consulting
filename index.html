@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en-us"> <!-- STYLED -->
+<html lang="en-us">
     <head>
         <title>Sameen Consulting</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body class="bg-color-primary font-color-primary">
+    <body class="l-sidebar bg-color-primary font-color-primary">
+        <span></span>
         <!-- Fixed sidebar -->
-        <button style="background-color: transparent; position: absolute; top: 3rem; left: 3rem; font-size: 2rem; color: var(--color-secondary)" class="sidebar-toggle-btn border-radius" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
+        <button style="z-index: 10; border: none; background-color: transparent; position: absolute; top: 0.5rem; left: 0.5rem; font-size: 2rem; color: var(--color-secondary)" class="sidebar-toggle-btn border-radius" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
         <div class="opaque-overlay" onclick="toggleSidebar()"></div>
-        <div style="align-items: center;" class="l-sidebar is-responsive l-flex-row">
-            <header class="sidebar l-flex-column animated box-shadow border-top border-radius bg-color-primary-light">
+        <header style="align-items: center;" class="is-responsive l-flex-row">
+            <div class="header-content l-flex-column animated box-shadow border-top border-radius bg-color-primary-light">
                 <h1 class="logo font-color-tertiary">Temporary Logo</h1>
                 <div>
                     <img style="margin-bottom: 1.5rem;" class="profile-img" src="images/profile.jpg" alt="Wamiz Sameen">
@@ -33,8 +34,8 @@
                     <a href="#" class="font-color-primary"><i class="fa fa-twitter-square"></i></a>
                     <a href="#" class="font-color-primary"><i class="fa fa-linkedin-square"></i></a>
                 </nav>
-            </header>
-        </div>
+            </div>
+        </header>
 
         <!-- Main content -->
         <main>
@@ -50,7 +51,7 @@
                 <!-- Services content -->
                 <div class="l-main-content">
                     <!-- Services table -->
-                    <div class="services-table animated section-content l-flex-row l-flex-two-column">                        
+                    <div class="services-table animated section-content l-flex-row l-flex-two-column is-responsive">                        
                         <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
                             <span class="fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -113,7 +114,7 @@
                 </div>
 
                 <div class="l-main-content section-content">
-                  <div class="l-flex-row l-flex-two-column">
+                  <div class="l-flex-row l-flex-two-column is-responsive">
 
                     <!-- Clients -->
                     <div class="clients-table animated l-flex-column bg-color-tertiary box-shadow border-radius border-top">
@@ -189,7 +190,9 @@
                     <div class="background bg-color-primary-light"></div>
                     <img class="box-shadow" src="images/profile2.jpg" alt="Wamiz Sameen">
                   </div>
-                  <p><span class="font-color-tertiary">Wamiz Sameen</span>, founder and managing director of Sameen Integration Technology Consulting, is an accomplished executive leader, respected as a strong executor and team builder. He leads by example, has a “Can-do” attitude and has delivered several complex and visible information technology initiatives for multiple Fortune 500 companies. During his 20 years of professional experience, Wamiz has built high performing global integration management offices and achieved proven results.</p>
+                  <div>
+                    <p><span style="font-size: 1.5rem;" class="font-color-tertiary">Wamiz Sameen</span>, founder and managing director of Sameen Integration Technology Consulting, is an accomplished executive leader, respected as a strong executor and team builder. He leads by example, has a “Can-do” attitude and has delivered several complex and visible information technology initiatives for multiple Fortune 500 companies. During his 20 years of professional experience, Wamiz has built high performing global integration management offices and achieved proven results.</p>
+                  </div>
                 </div>
 
             </section>
@@ -217,7 +220,7 @@
                                 
                                 <div>
                                     <label for="message">Message</label>
-<!--styled-->                           <textarea style="height: 100%;" name="message"></textarea>
+                                    <textarea name="message"></textarea>
                                 </div>
                             </div>
                             
@@ -258,7 +261,7 @@
         </footer>
 
         <script src="scrollToAnchor.js"></script>
-        <script src="onScroll.js"></script>
+        <!-- <script src="onScroll.js"></script> -->
         <script src="intersectionObserver.js"></script>
         <script src="sidebar.js"></script>
 
