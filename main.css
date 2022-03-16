@@ -275,15 +275,15 @@ main h2 {
 	}
 
 .icon-card {
-	--icon-card-padding-vertical: 3rem;
-	--icon-card-padding-left: 10rem;
+	--icon-card-padding-vertical: 2rem;
+	--icon-card-padding-left: 9rem;
 
 	position: relative;
 	padding:
 	var(--icon-card-padding-vertical, 0)
-	3rem
+	2rem
 	var(--icon-card-padding-vertical, 0)
-	var(--icon-card-padding-left, 0);
+	0;
 }
 
 	.icon-card .fa-stack {
@@ -294,10 +294,12 @@ main h2 {
 
 	.icon-card p {
 		font-size: var(--font-size-small);
+		margin-left: var(--icon-card-padding-left, 0);
 	}
 
 	.icon-card h3 {
 		margin-top: 0.75em;
+		margin-left: var(--icon-card-padding-left, 0);
 	}
 
 
@@ -318,7 +320,7 @@ main h2 {
 	.client-card ul {
 		list-style-type: square;
 		padding-left: 10%;
-		font-size: 1rem;
+		font-size: var(--font-size-medium);
 		color: var(--color-tertiary);
 	}
 
@@ -344,7 +346,7 @@ main h2 {
 	}
 
 input[type=text], textarea {
-	font-size: 1rem;
+	font-size: 16px;
 	margin-top: 1em;
 	margin-bottom: 2em;
 	padding: 1em;
@@ -366,7 +368,7 @@ input[type=submit] {
 
 
 label {
-	font-size: 0.8em;
+	font-size: var(--font-size-small);
 	letter-spacing: 0.3em;
 }
 
@@ -453,7 +455,7 @@ label {
 
 @media only screen and (max-width: 900px) {
 	.l-flex-row.l-flex-two-column.is-responsive > * {
-		width: auto;
+		width: 100%;
 		top: 0;
 	}
 }
@@ -494,14 +496,23 @@ label {
 			transform: translateY(35%);
 		}
 
-		.contact-form .l-flex-row {
-			display: block;
-		}
-			
-			.contact-form textarea {
-				height: 200px;
-			}
+	.contact-form .l-flex-row {
+		display: block;
 	}
+		
+		.contact-form textarea {
+			height: 200px;
+		}
+
+	.client-card {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.icon-card p {
+		margin-left: calc(var(--icon-card-padding-left)/2.5);
+	}
+}
 
 
 
