@@ -12,7 +12,7 @@
     <body class="l-sidebar bg-color-primary font-color-primary">
         <span></span>
         <!-- Fixed sidebar -->
-        <button style="z-index: 10; border: none; background-color: transparent; position: absolute; top: 0.5rem; left: 0.5rem; font-size: 2rem; color: var(--color-secondary)" class="sidebar-toggle-btn border-radius" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
+        <button class="btn-toggle-nav" style="z-index: 10; border: none; background-color: transparent; position: absolute; top: 0.5rem; left: 0.5rem; font-size: 2rem; color: var(--color-secondary)" class="sidebar-toggle-btn border-radius" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
         <div class="opaque-overlay" onclick="toggleSidebar()"></div>
         <header style="align-items: center;" class="is-responsive l-flex-row">
             <div class="header-content l-flex-column animated box-shadow border-top border-radius bg-color-primary-light">
@@ -231,8 +231,8 @@
             </section>
         </main>
         
-        <footer class="animated" style="background-color: #13201e">
-            <div class="l-flex-row l-main-content">
+        <footer id="footer" class="animated" style="background-color: #13201e">
+            <div class="l-flex-column l-main-content">
                 <!-- Email -->
                 <section class="icon-card">
                     <span class="fa-stack fa-2x">

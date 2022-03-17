@@ -79,6 +79,7 @@ html {
 
 h2 {
 	font-size: var(--font-size-header);
+	letter-spacing: 0.3em;
 	margin-bottom: 1em;
 }
 
@@ -96,16 +97,9 @@ a {
 	text-decoration: none;
 }
 
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
+li + li {
+	margin-top: 1.25em;
 }
-
-img {
-	object-fit: contain; /* Needed to maintain img aspect ratio in flex box. */
-}
-
 
 /* Layout */
 html, body {
@@ -113,6 +107,9 @@ html, body {
 	overflow-x: hidden;
 }
 
+#footer .l-main-content {
+	padding-bottom: 0;
+}
 
 .l-sidebar header {
 	position: fixed;
@@ -160,6 +157,16 @@ html, body {
 	margin-top: 4em;
 }
 
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+img {
+	object-fit: contain; /* Needed to maintain img aspect ratio in flex box. */
+}
+
 /* Modules */
 .header-content {
 	max-width: 80%;
@@ -183,10 +190,6 @@ html, body {
 nav li {
 	font-size: 1.5rem;
 	letter-spacing: 0.3em;
-}
-
-nav li + li {
-	margin-top: 1.5rem;
 }
 
 nav a {
@@ -214,8 +217,8 @@ nav a:hover {
 }
 
 main section {
-	--section-header-padding-top: 7em;
-	--section-content-verticle-offset: calc(-13rem + var(--section-header-padding-top));
+	--section-header-padding-top: 5em;
+	--section-content-verticle-offset: calc(-9rem + var(--section-header-padding-top));
 }
 
 
@@ -229,14 +232,9 @@ main .section-content {
 	top: var(--section-content-verticle-offset);
 }
 
-main h2 {
-	letter-spacing: 0.3em;
-}
-
 .section-header p {
 	color: hsl(0, 0%, 85%);
 	padding-left: 2em;
-	margin-bottom: 2rem;
 	font-size: var(--font-size-large);
 }
 
@@ -274,43 +272,15 @@ main h2 {
 		position: relative;
 	}
 
-.icon-card {
-	--icon-card-padding-vertical: 2rem;
-	--icon-card-padding-left: 9rem;
-
-	position: relative;
-	padding:
-	var(--icon-card-padding-vertical, 0)
-	2rem
-	var(--icon-card-padding-vertical, 0)
-	0;
-}
-
-	.icon-card .fa-stack {
-		position: absolute;
-		left: calc(var(--icon-card-padding-left)/2.5);
-		font-size: var(--font-size-icon);
-	}
-
-	.icon-card p {
-		font-size: var(--font-size-small);
-		margin-left: var(--icon-card-padding-left, 0);
-	}
-
-	.icon-card h3 {
-		margin-top: 0.75em;
-		margin-left: var(--icon-card-padding-left, 0);
-	}
-
-
 .clients-table {
 	justify-content: space-between;
 }
 
 .client-card {
-	padding: 2rem 3rem 2rem 3rem;
+	font-size: var(--font-size-medium);
+	padding: 2em 1em 2em 1em;
 	display: flex;
-	gap: 1rem;
+	gap: 2em;
 }
 
 	.client-card img {
@@ -318,9 +288,9 @@ main h2 {
 	}
 
 	.client-card ul {
+		font-size: var(--font-size-small);
 		list-style-type: square;
 		padding-left: 10%;
-		font-size: var(--font-size-medium);
 		color: var(--color-tertiary);
 	}
 
@@ -330,11 +300,12 @@ main h2 {
 
 
 .contact-form {
-	padding: 2em 3em;
+	font-size: var(--font-size-small);
+	padding: 2em 2em;
 }
 
 	.contact-form .l-flex-row {
-		gap: 10%;
+		gap: 5%;
 	}
 
 		.contact-form .l-flex-row > * {
@@ -345,11 +316,38 @@ main h2 {
 		height: 100%;
 	}
 
+.icon-card {
+	--icon-card-padding-vertical: 2em;
+	--icon-offset-right: 0.75em;
+	--content-padding-left: calc(var(--icon-offset-right )*8);
+
+	position: relative;
+	padding:
+	var(--icon-card-padding-vertical, 0)
+	2em
+	var(--icon-card-padding-vertical, 0)
+	var(--content-padding-left, 0);
+}
+
+	.icon-card .fa-stack {
+		position: absolute;
+		left: calc(var(--icon-offset-right));
+		font-size: var(--font-size-icon);
+	}
+
+	.icon-card p {
+		font-size: var(--font-size-medium);
+		
+	}
+
+	.icon-card h3 {
+		margin-top: 0.75em;
+	}
+
 input[type=text], textarea {
 	font-size: 16px;
-	margin-top: 1em;
-	margin-bottom: 2em;
-	padding: 1em;
+	margin: 0.75em 0 1.5em 0;
+	padding: 0.5em;
 	border-radius: 4px;
 	width: 100%;
 	border: none;
@@ -358,7 +356,8 @@ input[type=text], textarea {
 }
 
 input[type=submit] {
-	padding: 0.8rem 1rem;
+	font-size: var(--font-size-small);
+	padding: 0.75em;
 	background-color: var(--color-tertiary);
 	color: var(--color-secondary);
 	border-radius: 4px;
@@ -366,10 +365,12 @@ input[type=submit] {
 	cursor: pointer;
 }
 
-
 label {
-	font-size: var(--font-size-small);
 	letter-spacing: 0.3em;
+}
+
+.values-table {
+	justify-content: space-around;
 }
 
 /* Themes */
@@ -443,7 +444,7 @@ label {
 }
 
 /* Media queries */
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1400px) {
 	.l-sidebar .l-main-content {
 		padding: 0 5% 5% 5%;
 	}
@@ -453,7 +454,7 @@ label {
 	}
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 950px) {
 	.l-flex-row.l-flex-two-column.is-responsive > * {
 		width: 100%;
 		top: 0;
@@ -507,10 +508,6 @@ label {
 	.client-card {
 		flex-direction: column;
 		align-items: center;
-	}
-
-	.icon-card p {
-		margin-left: calc(var(--icon-card-padding-left)/2.5);
 	}
 }
 
