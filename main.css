@@ -102,8 +102,8 @@ li + li {
 }
 
 /* Layout */
+/* Disables horizontal scrolling. No idea where the extra space comes from. */
 html, body {
-	/* Disables horizontal scrolling. No idea where the extra space comes from. */
 	overflow-x: hidden;
 }
 
@@ -118,7 +118,7 @@ html, body {
 	width: var(--sidebar-width, 350px);
 	height: 100vh;
 	z-index: 1;
-	transition: 1s ease-in;
+	transition: 0.7s ease-in;
 }
 
 .l-sidebar .l-main-content {
@@ -168,11 +168,22 @@ img {
 }
 
 /* Modules */
+.btn-nav {
+	font-size: var(--font-size-icon);
+	color: var(--color-secondary);
+	border: none;
+	background-color: transparent
+}
+
+.title-bar {
+	display: none;
+}
+
 .header-content {
-	max-width: 80%;
+	width: 70%;
 	min-height: 90%;
 	margin: 0 auto;
-	padding: 3em 2em;
+	padding: 3em 1em;
 	text-align: center;
 }
 
@@ -373,6 +384,10 @@ label {
 	justify-content: space-around;
 }
 
+.title-bar > * {
+	display: inline;
+}
+
 /* Themes */
 .bg-color-primary {
 	background-color: var(--color-primary);
@@ -407,7 +422,7 @@ label {
 }
 
 .border-radius {
-	border-radius: 10px;
+	border-radius: 7px;
 }
 
 .border-top {
@@ -419,8 +434,8 @@ label {
 }
 
 .parallax {
-	background-image: url("images/parallax.jpg");
 	min-height: 400px;
+	background-image: url("images/parallax.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -430,11 +445,11 @@ label {
 .opaque-overlay {
 	display: none;
 	position: fixed;
+	width: 100%;
 	top: 0;
 	right: 0;
 	left: 0;
 	bottom: 0;
-	width: 100%;
 	z-index: 1;
 	background-color: hsla(0, 0%, 0%, 0.5);
 }
@@ -445,12 +460,29 @@ label {
 
 /* Media queries */
 @media only screen and (max-width: 1400px) {
+	body.header-hidden #header {
+		transform: translateX(calc(-1*var(--sidebar-width)));
+		max-width: var(--sidebar-width);
+	}
+
+	body:not(.header-hidden) .opaque-overlay {
+		display: block;
+	}
+
 	.l-sidebar .l-main-content {
 		padding: 0 5% 5% 5%;
 	}
-	.l-sidebar header.is-responsive {
-		transform: translateX(calc(-1*var(--sidebar-width)));
-		max-width: var(--sidebar-width);
+	
+	.l-sidebar .header-content {
+		height: 100%;
+		margin: 0 auto 0 0;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		max-width: calc(var(--sidebar-width)/2);
+	}
+	
+	.title-bar {
+		display: block;
 	}
 }
 
@@ -458,15 +490,6 @@ label {
 	.l-flex-row.l-flex-two-column.is-responsive > * {
 		width: 100%;
 		top: 0;
-	}
-}
-
-@media only screen and (max-width: 800px) {
-	.l-sidebar .header-content {
-		height: 100%;
-		margin: 0 auto 0 0;
-		border-bottom-left-radius: 0;
-		border-top-left-radius: 0;
 	}
 }
 

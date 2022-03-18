@@ -9,14 +9,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body class="l-sidebar bg-color-primary font-color-primary">
-        <span></span>
+    <body id="body" class="l-sidebar header-hidden bg-color-primary font-color-primary">
+        <span class="title-bar" style="z-index: 1; width: 100%; align-items: flex-end; display: flex; justify-content: space-between; position: fixed; top: 0;">
+            <button class="btn-nav btn-toggle-header" style="top: 1rem; left: 5vw;"><i class="fa fa-navicon"></i></button>
+            <h1>Sameen Consulting</h1> 
+        </span>
         <!-- Fixed sidebar -->
-        <button class="btn-toggle-nav" style="z-index: 10; border: none; background-color: transparent; position: absolute; top: 0.5rem; left: 0.5rem; font-size: 2rem; color: var(--color-secondary)" class="sidebar-toggle-btn border-radius" onclick="toggleSidebar()"><i class="fa fa-bars"></i></button>
-        <div class="opaque-overlay" onclick="toggleSidebar()"></div>
-        <header style="align-items: center;" class="is-responsive l-flex-row">
+        <div class="btn-toggle-header opaque-overlay"></div>
+        <header id="header" style="align-items: center;" class="l-flex-row">
             <div class="header-content l-flex-column animated box-shadow border-top border-radius bg-color-primary-light">
-                <h1 class="logo font-color-tertiary">Temporary Logo</h1>
                 <div>
                     <img style="margin-bottom: 1.5rem;" class="profile-img" src="images/profile.jpg" alt="Wamiz Sameen">
                     <h3>Wamiz Sameen</h3>
@@ -263,7 +264,7 @@
         <script src="scrollToAnchor.js"></script>
         <!-- <script src="onScroll.js"></script> -->
         <script src="intersectionObserver.js"></script>
-        <script src="sidebar.js"></script>
+        <script src="header.js"></script>
 
     </body>
 </html>
