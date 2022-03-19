@@ -10,18 +10,30 @@
     </head>
 
     <body id="body" class="l-sidebar header-hidden bg-color-primary font-color-primary">
-        <span class="title-bar bg-color-primary-light box-shadow" style="z-index: 1; width: 100%; align-items: center; justify-content: space-between; position: fixed; top: 0;">
+        <span class="title-bar bg-color-primary-light box-shadow">
             <button class="btn-nav btn-toggle-header"><i class="fa fa-navicon"></i></button>
-            <h1 style="font-weight: 600;" class="font-color-tertiary">Sameen Consulting</h1> 
+            <!-- Logo -->
+            <div style="display: flex; padding-left: 0.5em; font-size: 16px; font-weight: 600; text-align: left;" class="logo">
+              <h1 style="color: #8e8c8d">SAMEEN</h1>
+              <div style="display: flex;">
+                <h1 style="color: #f04b23">CONSULTING</h1>
+                <span style="font-size: 0.35em; color: #f1b955; transform: rotate(-90deg);">.com</span>
+              </div>
+            </div>
         </span>
         <!-- Fixed sidebar -->
         <div class="btn-toggle-header opaque-overlay"></div>
         <header id="header" style="align-items: center;" class="l-flex-row">
             <div class="header-content l-flex-column animated box-shadow border-top border-radius bg-color-primary-light">
-                <div>
-                    <img style="margin-bottom: 1.5rem;" class="profile-img" src="images/profile.jpg" alt="Wamiz Sameen">
-                    <h3>Wamiz Sameen</h3>
+                <!-- Logo -->
+                <div style="margin: 0 auto; padding-left: 0.5em; font-size: 32px; font-weight: 600; text-align: left;" class="logo">
+                  <h1 style="color: #8e8c8d">SAMEEN</h1>
+                  <div style="display: flex;">
+                    <h1 style="color: #f04b23">CONSULTING</h1>
+                    <span style="font-size: 0.35em; color: #f1b955; transform: rotate(-90deg);">.com</span>
+                  </div>
                 </div>
+
                 <nav class="nav-primary">
                     <ul class="font-color-tertiary">
                         <li><a href="#services">Services</a></li>
@@ -115,33 +127,72 @@
                 </div>
 
                 <div class="l-main-content section-content">
-                  <div class="l-flex-row l-flex-two-column is-responsive">
-
                     <!-- Clients -->
-                    <div class="clients-table animated l-flex-column bg-color-tertiary box-shadow border-radius border-top">
-                      <div class="client-card">
-                        <img src="https://scontent.ffxe1-1.fna.fbcdn.net/v/t39.8562-6/252294889_575082167077436_6034106545912333281_n.svg/meta-logo-primary_standardsize.svg?_nc_cat=1&ccb=1-5&_nc_sid=ad8a9d&_nc_ohc=6gdZU0fTNOkAX9gHTP-&_nc_ht=scontent.ffxe1-1.fna&oh=00_AT-fOD6G7kxzTcJh1GCR6NwG2R4BcNOPfogdd7XYoSn0gg&oe=6236B239">
+                    <div class="clients-table animated l-flex-row l-flex-two-column is-responsive">
+                      <!-- NIB -->
+                      <div class="client-card bg-color-tertiary box-shadow border-radius border-top">
+                        <img alt="NIB" src="https://media-exp1.licdn.com/dms/image/C4D0BAQE1A3RGYjUsQw/company-logo_200_200/0/1519856596310?e=1655942400&v=beta&t=dQYtWQkpQM82A4TP1yCph5MRjUEHibxKDPLglAWhLSk">
+                        <div class="client-card--content">
+                          <h3>Transformation Management</h3>
+                          <ul>
+                            <li><span>Helped a not for profit organization transform their business model to digital data transfer and e-commerce
+                              platform realizing a revenue of $5 million dollars the first year.</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- Meta -->
+                      <div class="client-card bg-color-tertiary box-shadow border-radius border-top">
+                        <img alt="Meta" src="https://i.picsum.photos/id/1032/2880/1800.jpg?hmac=5SLBdyPZBMyr5IBkIRfffZV10bP87Y7RrxVZX1vCefA">
                         <div class="client-card--content">
                           <h3>Program Executive for Meta Reality Labs</h3>
-                            <ul>
-                              <li><span>Product lifecycle management</span></li>
-                              <li><span>Global trade compliance</span></li>
-                              <li><span>Dangerous goods management</span></li>
-                              <li><span>Data management</span></li>
-                            </ul>
-                          </div>
-                      </div>
-                      <div class="client-card">
-                        <img src="https://content.fortune.com/wp-content/uploads/2021/03/workplaces_financial_services_insurance.jpg">
-                        <div class="client-card--content">
-                          <h3>Program Executive for Fortune 100 Insurance</h3>
                           <ul>
+                            <li><span>Oculus AR/VR business enablement team</span></li>
+                            <li><span>Product lifecycle management</span></li>
+                            <li><span>Global trade compliance</span></li>
+                            <li><span>Dangerous goods management</span></li>
+                            <li><span>Data management</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- Tyco -->
+                      <div class="client-card bg-color-tertiary box-shadow border-radius border-top">
+                        <img alt="Tyco" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Tyco-Logo.svg/1200px-Tyco-Logo.svg.png">
+                        <div class="client-card--content">
+                          <h3>Consulting</h3>
+                          <ul>
+                            <li><span>Delivered portfolio on implementing Global Warehouse Management System upgrade with targeted savings of 1.2M/year</span></li>
+                            <li><span>IT advisory for a $2B divestiture</span></li>
+                            <li><span>Lead 2 year Business Process Outsourcing initiative with target revenues of over $200M/year</span></li>
+                            <li><span>Divested critical, high availability Government, Commercial, and Residential monitoring application, database, and infrastructure</span></li>                            
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- Surgalign -->
+                      <div class="client-card bg-color-tertiary box-shadow border-radius border-top">
+                        <img alt="Surgalign" src="https://media-exp1.licdn.com/dms/image/C4E0BAQEi60HTFLsXFQ/company-logo_200_200/0/1595256619246?e=1655942400&v=beta&t=ud9QrF7V9-X8i3YpQpvmvdZtrUUAKBKV__W1t4QkQg4">
+                        <div class="client-card--content">
+                          <h3>Integration Management</h3>
+                          <ul>
+                            <li><span>Established technology strategy</span></li>
+                            <li><span>Delivered SAP, Microsoft 365, and network infrastructure projects</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- AIG -->
+                      <div class="client-card bg-color-tertiary box-shadow border-radius border-top">
+                        <img alt="AIG" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/AIG_new_logo.svg/1920px-AIG_new_logo.svg.png">
+                        <div class="client-card--content">
+                          <h3>Program Executive</h3>
+                          <ul>
+                            <li><span>General procurement and sourcing Services Application Contract Separation</span></li>
+                            <li><span>1000+ applications and their accompanying vendor contacts for licenses, maintenance, and delivery office responsibilitiess</span></li>
                             <li><span>Program management oversight</span></li>
                             <li><span>Delivery office responsibilities</span></li>
                           </ul>
                         </div>
                       </div>
-                      <div class="client-card">
+                      <!-- M&A -->
+                      <div class="client-card bg-color-tertiary box-shadow border-radius border-top">
                         <img src="https://media-exp1.licdn.com/dms/image/C560BAQE1piekrmxLQA/company-logo_200_200/0/1519856944140?e=1654732800&v=beta&t=pMmFJVliDtzEwavHZfMir4ekk3bEVFdkVIghtMIHQKs">
                         <div clas="client-card--content">
                           <h3>Head of PMO for M&A Technology</h3>
@@ -153,49 +204,47 @@
                       </div>
                     </div>
 
-                    <!-- Values -->
-                    <div class="values-table animated l-flex-column box-shadow border-radius bg-color-tertiary border-top">
-                        <div class="icon-card">
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-bolt fa-stack-1x"></i>
-                            </span>
-                            <h3>Urgency</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        </div>
-                        <div class="icon-card">
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-support fa-stack-1x"></i>
-                            </span>
-                            <h3>Commitment</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        </div>
-                        <div class="icon-card">
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-certificate fa-stack-1x"></i>
-                            </span>
-                            <h3>Accountability</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        </div>
-                        
+                    <!-- Detailed about -->
+                    <div style="margin: 4rem 0" class="about-details animated l-flex-row l-flex-two-column">
+                      <div class="about-image">
+                        <div class="background bg-color-primary-light"></div>
+                        <img class="box-shadow" src="images/profile.jpg" alt="Wamiz Sameen">
+                      </div>
+                      <div>
+                        <p><span style="font-size: 1.5rem;" class="font-color-tertiary">Wamiz Sameen</span>, founder and managing director of Sameen Integration Technology Consulting, is an accomplished executive leader, respected as a strong executor and team builder. He leads by example, has a “Can-do” attitude and has delivered several complex and visible information technology initiatives for multiple Fortune 500 companies. During his 20 years of professional experience, Wamiz has built high performing global integration management offices and achieved proven results.</p>
+                      </div>
                     </div>
 
-                  </div>
+                    <!-- Values -->
+                    <div style="gap: 1rem; text-align: center;" class="values-table animated l-flex-row">
+                      <div style="flex: 1; transform: translate(10%, 40%);" class="icon-card bg-color-tertiary box-shadow border-radius border-top">
+                          <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-bolt fa-stack-1x"></i>
+                          </span>
+                          <h3>Urgency</h3>
+                      </div>
+                      <div style="flex: 1; transform: translate(-10%, 20%);" class="icon-card bg-color-tertiary box-shadow border-radius border-top">
+                          <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-support fa-stack-1x"></i>
+                          </span>
+                          <h3>Commitment</h3>
+                      </div>
+                      <div style="flex: 1; transform: translate(-30%, 0);" class="icon-card bg-color-tertiary box-shadow border-radius border-top">
+                          <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-certificate fa-stack-1x"></i>
+                          </span>
+                          <h3>Accountability</h3>
+                      </div>
+
                 </div>
                 
-                <!-- Detailed about -->
-                <div class="about-details animated l-main-content section-content l-flex-row l-flex-two-column">
-                  <div class="about-image">
-                    <div class="background bg-color-primary-light"></div>
-                    <img class="box-shadow" src="images/profile2.jpg" alt="Wamiz Sameen">
-                  </div>
-                  <div>
-                    <p><span style="font-size: 1.5rem;" class="font-color-tertiary">Wamiz Sameen</span>, founder and managing director of Sameen Integration Technology Consulting, is an accomplished executive leader, respected as a strong executor and team builder. He leads by example, has a “Can-do” attitude and has delivered several complex and visible information technology initiatives for multiple Fortune 500 companies. During his 20 years of professional experience, Wamiz has built high performing global integration management offices and achieved proven results.</p>
-                  </div>
-                </div>
 
+
+                  
+              </div>
             </section>
 
             <!-- Contact -->
