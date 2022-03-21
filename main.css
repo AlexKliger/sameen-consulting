@@ -79,12 +79,13 @@ html {
 
 h2 {
 	font-size: var(--font-size-header);
-	letter-spacing: 0.3em;
+	letter-spacing: 0.1em;
 	margin-bottom: 1em;
 }
 
 h3 {
 	font-size: var(--font-size-large);
+	font-weight: 600;
 	margin-bottom: 1em;
 }
 
@@ -242,6 +243,10 @@ main .section-content {
 	font-size: var(--font-size-large);
 }
 
+.services-table > * {
+	min-height: 192px;
+}
+
 .services-table p {
 	color: var(--color-secondary-transparent);
 	font-size: var(--font-size-large);
@@ -277,27 +282,27 @@ main .section-content {
 	}
 
 .client-card {
-	font-size: var(--font-size-medium);
-	padding: 2em 1em 2em 1em;
-	display: flex;
-	gap: 2em;
+	position: relative;
 }
 
 	.client-card img {
-		max-width: 150px;
+		max-width: 350px;
 	}
 
-	.client-card ul {
+	.client-card section {
+		padding: 2em 1em;
+		width: 90%;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -4rem);
+	}
+
+	.client-card a {
+		border-bottom: var(--color-tertiary) solid 2px;
+		color: var(--color-secondary);
 		font-size: var(--font-size-small);
-		list-style-type: square;
-		padding-left: 10%;
-		color: var(--color-tertiary);
+		padding: 1em 0;
 	}
-
-	.client-card span {
-		color: var(--color-primary);
-	}
-
 
 .contact-form {
 	font-size: var(--font-size-small);
@@ -318,13 +323,15 @@ main .section-content {
 
 .icon-card {
 	--icon-card-padding-vertical: 2em;
+	--icon-card-padding-right: 1em;
 	--icon-offset-right: 0.75em;
 	--content-padding-left: calc(var(--icon-offset-right )*8);
 
+	font-size: var(--font-size-medium);
 	position: relative;
 	padding:
 	var(--icon-card-padding-vertical, 0)
-	2em
+	var(--icon-card-padding-right, 0)
 	var(--icon-card-padding-vertical, 0)
 	var(--content-padding-left, 0);
 }
@@ -343,6 +350,28 @@ main .section-content {
 	.icon-card h3 {
 		margin-top: 0.75em;
 	}
+
+	.icon-card.small {
+		--icon-card-padding-vertical: 0.25em;
+		--icon-card-padding-right: 0;
+		--icon-offset-right: 0.25em;
+		--content-padding-left: calc(var(--icon-offset-right) * 15);
+		font-size: var(--font-size-small);
+	}
+
+	.icon-card.small .fa-stack {
+		font-size: var(--font-size-large);
+	}
+
+	.icon-card.small h3 {
+		font-size: var(--font-size-medium);
+		margin-top: 0.75em;
+	}
+
+.industries {
+	padding: 2em 1em;
+	margin-bottom: 14rem;
+}
 
 input[type=text], textarea {
 	font-size: 16px;
@@ -610,6 +639,12 @@ label {
 	}
 
 	.section-header.animate > * {
+		animation-name: slide-from-bottom;
+		animation-duration: var(--animation-duration);
+		animation-iteration-count: 1;
+	}
+
+	.industries.animate {
 		animation-name: slide-from-bottom;
 		animation-duration: var(--animation-duration);
 		animation-iteration-count: 1;
