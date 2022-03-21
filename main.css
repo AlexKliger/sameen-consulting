@@ -276,13 +276,14 @@ main .section-content {
 	.about-details .background {
 		position: absolute;
 		right: 3rem;
-		width: 70%;
+		width: 80%;
 		height: 100%;
 	}
 
 	.about-details p {
 		margin: 2rem 0 6rem 0;
 		text-align: justify;
+		padding-right: 10%;
 	}
 
 	.about-details .about-image {
