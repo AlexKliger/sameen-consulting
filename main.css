@@ -126,6 +126,18 @@ html, body {
 	padding: 0 5% 5% calc(var(--sidebar-width));
 }
 
+.l-grid-2-column {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 1fr;
+}
+
+.l-grid-2-column > *:nth-child(2n) {
+	position: relative;
+	top: 3rem;
+}
+
 .l-flex-row {
 	display: flex;
 }
@@ -241,10 +253,6 @@ main .section-content {
 	color: hsl(0, 0%, 85%);
 	padding-left: 2em;
 	font-size: var(--font-size-large);
-}
-
-.services-table > * {
-	min-height: 192px;
 }
 
 .services-table p {
