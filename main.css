@@ -383,6 +383,7 @@ main .section-content {
 	}
 
 	.industries-table {
+		row-gap: 3em;
 		width: 30%;
 	}
 
@@ -509,7 +510,7 @@ label {
 }
 
 #about .parallax {
-	background-image: url("images/parallax-about.jpg")
+	background-image: url("images/parallax-about.jpg");
 }
 
 #contact .parallax {
@@ -644,6 +645,10 @@ label {
 }
 
 /* Animation */
+.animated {
+	will-change: transform opacity;
+}
+
 @media (prefers-reduced-motion: no-preference) {
 	p.animate {
 		animation-name: slide-from-bottom;
