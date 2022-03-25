@@ -133,7 +133,6 @@ html, body {
 
 .l-grid-2-column {
 	display: grid;
-	gap: 1rem;
 	grid-template-columns: 1fr 1fr;
 	grid-auto-rows: 1fr;
 }
@@ -249,10 +248,14 @@ main .section-content {
 	font-size: var(--font-size-large);
 }
 
-.services-table p {
-	color: var(--color-secondary-transparent);
-	font-size: var(--font-size-large);
+.services-table {
+	gap: 1rem;
 }
+
+	.services-table p {
+		color: var(--color-secondary-transparent);
+		font-size: var(--font-size-large);
+	}
 
 .about-details {
 	padding-right: 5%;
@@ -413,9 +416,19 @@ label {
 }
 
 .values-table {
+	--vertical-offset: 50%;
+
 	justify-content: space-around;
 	margin-top: 5rem;
 	text-align: center;
+}
+
+.values-table > *:nth-child(1) {
+	transform: translate(0, calc(-1*var(--vertical-offset)));
+}
+
+.values-table > *:nth-child(3) {
+	transform: translate(0, var(--vertical-offset));
 }
 
 .title-bar {
@@ -575,7 +588,6 @@ label {
 
 	.l-grid-2-column.is-responsive {
 		grid-template-columns: auto;
-		gap: 0;
 	}
 
 
@@ -617,6 +629,18 @@ label {
 		.contact-form textarea {
 			height: 200px;
 		}
+
+	.values-table {
+		flex-direction: column;
+	}
+
+	.values-table > *:nth-child(1) {
+		transform: none;
+	}
+
+	.values-table > *:nth-child(3) {
+		transform: none;
+	}
 }
 
 /* Animation */
