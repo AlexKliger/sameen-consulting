@@ -179,13 +179,13 @@
                         </div>
                       </div>
                       <!-- Clients -->
-                      <div style="width: 100%;" class="clients l-grid-3-column">
+                      <div class="clients l-grid-3-column">
                         <!-- Tech -->
                         <div class="client-card">
                           <img src="images/oculus.jpg">
                           <section class="bg-color-primary-light font-color-primary border-top">
                             <h3>Meta Reality Labs</h3>
-                            <p style="margin-bottom: 1em;">Executive for the AR/VR program, leading product life cycle management, global trade compliance, dangerous goods and master data management initiatives.</p>
+                            <p>Executive for the AR/VR program, leading product life cycle management, global trade compliance, dangerous goods and master data management initiatives.</p>
                             <a href="#"><span>LEARN MORE</span></a>
                           </section>
                         </div>
@@ -194,7 +194,7 @@
                           <img src="images/braille.jpg">
                           <section class="bg-color-primary-light font-color-primary border-top">
                             <h3>NIB</h3>
-                            <p style="margin-bottom: 1em;">Transformed the business model of the National Industries for the Blind to digital data transfer and e-commerce platforms realizing a revenue of $5M dollars the first year.</p>
+                            <p>Transformed the business model of the National Industries for the Blind to digital data transfer and e-commerce platforms realizing a revenue of $5M dollars the first year.</p>
                             <a href="#"><span>LEARN MORE</span></a>
                           </section>
                         </div>
@@ -203,7 +203,7 @@
                           <img src="images/camera.jpg">
                           <section class="bg-color-primary-light font-color-primary border-top">
                             <h3>Johnson Controls</h3>
-                            <p style="margin-bottom: 1em;">Delivered global business transformation for finance, procurement, and supply chain which helped realize benefits of $500M+ over a 3 year period. </p>
+                            <p>Delivered global business transformation for finance, procurement, and supply chain which helped realize benefits of $500M+ over a 3 year period. </p>
                             <a href="#"><span>LEARN MORE</span></a>
                           </section>
                         </div>
@@ -221,29 +221,32 @@
 
                     <!-- HEAVILY STYLED -->
                     <!-- Values -->
-                    <div style="gap: 1rem; text-align: center; margin-top: 6em;" class="values-table animated l-flex-row">
-                      <div style="flex: 1; transform: translate(10%, 60%);" class="icon-card bg-color-tertiary box-shadow border-radius border-top">
-                          <span class="fa-stack fa-2x">
-                              <i class="fa fa-circle fa-stack-2x"></i>
-                              <i class="fa fa-bolt fa-stack-1x"></i>
-                          </span>
-                          <h3>Urgency</h3>
+                    <div class="values">
+                      <h3 style="font-size: var(--font-size-header)">Our Core <b class="font-color-tertiary">Values</b></h3>
+                      <div class="values-table animated l-flex-row">
+                        <div style="flex: 1; transform: translate(0, -50%);" class="icon-card bg-color-tertiary">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-bolt fa-stack-1x"></i>
+                            </span>
+                            <h3>Urgency</h3>
+                        </div>
+                        <div style="flex: 1;" class="icon-card bg-color-tertiary">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-handshake-o fa-stack-1x"></i>
+                            </span>
+                            <h3>Commitment</h3>
+                        </div>
+                        <div style="flex: 1; transform: translate(0, 50%);" class="icon-card bg-color-tertiary">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-certificate fa-stack-1x"></i>
+                            </span>
+                            <h3>Accountability</h3>
+                        </div>
                       </div>
-                      <div style="flex: 1; transform: translate(-5%, 10%);" class="icon-card bg-color-tertiary box-shadow border-radius border-top">
-                          <span class="fa-stack fa-2x">
-                              <i class="fa fa-circle fa-stack-2x"></i>
-                              <i class="fa fa-handshake-o fa-stack-1x"></i>
-                          </span>
-                          <h3>Commitment</h3>
-                      </div>
-                      <div style="flex: 1; transform: translate(-20%, -40%);" class="icon-card bg-color-tertiary box-shadow border-radius border-top">
-                          <span class="fa-stack fa-2x">
-                              <i class="fa fa-circle fa-stack-2x"></i>
-                              <i class="fa fa-certificate fa-stack-1x"></i>
-                          </span>
-                          <h3>Accountability</h3>
-                      </div>
-
+                    </div>
                 </div>
               </div>
             </section>
@@ -282,33 +285,33 @@
             </section>
         </main>
         
-        <footer id="footer" class="animated" style="background-color: #13201e">
-            <div class="l-flex-column l-main-content">
-                <!-- Email -->
-                <section class="icon-card small">
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-phone fa-stack-1x"></i>
-                    </span>
-                    <h3>555-555-5555</h3>
-                </section>
-                <!-- Phone-->
-                <section class="icon-card small">
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-envelope fa-stack-1x"></i>
-                    </span>
-                    <h3>myemail@domain.com</h3>
-                </section>
-                <!-- Address -->
-                <section class="icon-card small">
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-map-marker fa-stack-1x"></i>
-                    </span>
-                    <h3>Miami, FL</h3>
-                </section>
-            </div>
+        <footer id="footer" class="l-main-content animated" style="background-color: #13201e">
+          <div class="l-flex-column">
+            <!-- Email -->
+            <section class="icon-card small">
+                <span class="fa-stack fa-2x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-phone fa-stack-1x"></i>
+                </span>
+                <h3>555-555-5555</h3>
+            </section>
+            <!-- Phone-->
+            <section class="icon-card small">
+                <span class="fa-stack fa-2x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+                <h3>myemail@domain.com</h3>
+            </section>
+            <!-- Address -->
+            <section class="icon-card small">
+                <span class="fa-stack fa-2x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-map-marker fa-stack-1x"></i>
+                </span>
+                <h3>Miami, FL</h3>
+            </section>
+        </div>
         </footer>
 
         <script src="scrollToAnchor.js"></script>
