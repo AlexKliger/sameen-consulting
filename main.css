@@ -139,7 +139,7 @@ html, body {
 
 .l-grid-3-column {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-auto-rows: 1fr;
 	gap: 1rem;
 }
@@ -189,7 +189,7 @@ img {
 	width: 60%;
 	min-height: 90%;
 	margin: 0 auto;
-	padding: 3em 1em;
+	padding: 3em 2em;
 	text-align: center;
 }
 
@@ -420,7 +420,6 @@ label {
 	--vertical-offset: 50%;
 
 	justify-content: space-around;
-	margin-top: 5rem;
 	text-align: center;
 }
 
@@ -577,7 +576,7 @@ label {
 
 	.industries .l-flex-2-column > * {
 		width: 100%;
-		padding-bottom: 3em;
+		margin-bottom: 3em;
 	}
 
 		.industries-table.offset-every-other > *:nth-child(2n) {
@@ -630,6 +629,10 @@ label {
 		.contact-form textarea {
 			height: 200px;
 		}
+
+	.industries .l-flex-2-column {
+		margin-bottom: 0;
+	}
 
 	.values-table {
 		flex-direction: column;
