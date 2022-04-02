@@ -5,12 +5,15 @@
         <title>Sameen Consulting</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/themes.css">
+        <link rel="stylesheet" type="text/css" href="css/animations.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body id="body" class="l-sidebar header-hidden bg-color-primary font-color-primary">
-        <span class="title-bar bg-color-primary-light box-shadow">
+    <body id="body" class="l-sidebar header-hidden bg--primary font-color--primary">
+        <span class="title-bar bg--primary-light box-shadow">
             <button class="btn-nav btn-toggle-header"><i class="fa fa-navicon"></i></button>
             <!-- Logo -->
             <div style="display: flex; padding-left: 0.5em; font-size: 16px; font-weight: 600; text-align: left;" class="logo">
@@ -23,7 +26,7 @@
         <!-- Fixed sidebar -->
         <div class="btn-toggle-header opaque-overlay"></div>
         <header id="header" style="align-items: center;" class="l-flex-row">
-            <div class="header-content l-flex-column animated box-shadow border-top border-radius bg-color-primary-light">
+            <div class="header-content l-flex-column animated box-shadow border-top border-radius bg--primary-light">
                 <!-- Logo -->
                 <div style="margin: 0 auto; padding-left: 0.5em; font-size: 32px; font-weight: 600; text-align: left;" class="logo">
                   <h1 style="color: #8e8c8d">SAMEEN</h1>
@@ -34,7 +37,7 @@
                 </div>
 
                 <nav class="nav-primary">
-                    <ul class="font-color-tertiary">
+                    <ul class="font-color--tertiary">
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -42,74 +45,74 @@
                 </nav>
 
                 <nav class="nav-socials">
-                    <a href="#" class="font-color-primary"><i class="fa fa-facebook-square"></i></a>
-                    <a href="#" class="font-color-primary"><i class="fa fa-twitter-square"></i></a>
-                    <a href="#" class="font-color-primary"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="#" class="font-color--primary"><i class="fa fa-facebook-square"></i></a>
+                    <a href="#" class="font-color--primary"><i class="fa fa-twitter-square"></i></a>
+                    <a href="#" class="font-color--primary"><i class="fa fa-linkedin-square"></i></a>
                 </nav>
             </div>
         </header>
 
-        <!-- Main content -->
+        <!-- Main content --> 
         <main>
             <!-- Services -->
-            <section id="services">
+            <section id="services" class="main-section">
                 <!-- Section header -->
-                <div class="section-header animated parallax">
+                <div class="main-section__header animated parallax">
                     <div class="l-main-content">
-                        <h2 class="font-color-tertiary">Services</h2>
+                        <h2 class="font-color--tertiary">Services</h2>
                         <p>Technology integration and program management consulting services for...</p>
                     </div>
                 </div>
                 <!-- Services content -->
                 <div class="l-main-content">
                     <!-- Services table -->
-                    <div class="services-table animated section-content l-grid-2-column is-responsive offset-every-other">                        
-                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
-                            <span class="fa-stack fa-2x">
+                    <div class="services-table animated main-section__content l-grid-2-column is-responsive offset-every-other">                        
+                        <section class="icon-card box-shadow bg--primary-light border-top border-radius">
+                            <span class="icon-card__icon fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-code-fork fa-stack-1x"></i>
                             </span>
-                            <h3>Mergers and Acquisitions</h3>
-                            <p>Integration and Separation of technology solutions pre and post M&A activities including vendor management, contractual, sourcing, due diligence, strategy and delivery of programs within the portfolio.</p>
+                            <h3 class="icon-card__title">Mergers and Acquisitions</h3>
+                            <p class="icon-card__text">Integration and Separation of technology solutions pre and post M&A activities including vendor management, contractual, sourcing, due diligence, strategy and delivery of programs within the portfolio.</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
-                            <span class="fa-stack fa-2x">
+                        <section class="icon-card box-shadow bg--primary-light border-top border-radius">
+                            <span class="icon-card__icon fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-sitemap fa-stack-1x"></i>
                             </span>
-                            <h3>Supply Chains</h3>
+                            <h3 class="icon-card__title">Supply Chains</h3>
                             <p>Expertise in technologies related to 3PL integration, manufacturing, distribution, and automation.</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
-                            <span class="fa-stack fa-2x">
+                        <section class="icon-card box-shadow bg--primary-light border-top border-radius">
+                            <span class="icon-card__icon fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-gears fa-stack-1x"></i>
                             </span>
-                            <h3>Program Delivery Offices</h3>
+                            <h3 class="icon-card__title">Program Delivery Offices</h3>
                             <p>Build high performing agile Program Management Office services and transform it into a result, value and metric driven organization with measurable KPIs (Key Performance Indicators).</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
-                            <span class="fa-stack fa-2x">
+                        <section class="icon-card box-shadow bg--primary-light border-top border-radius">
+                            <span class="icon-card__icon fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-cubes fa-stack-1x"></i>
                             </span>
-                            <h3>Enterprise Governance</h3>
+                            <h3 class="icon-card__title">Enterprise Governance</h3>
                             <p>Establish a technology driven enterprise governance framework that includes agile driven project management practices e.g., timeline, financial controls, resource allocation, quality results and validations.</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
-                            <span class="fa-stack fa-2x"> 
+                        <section class="icon-card box-shadow bg--primary-light border-top border-radius">
+                            <span class="icon-card__icon fa-stack fa-2x"> 
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-map-signs fa-stack-1x"></i>
                             </span>
-                            <h3>Roadmap and Strategy</h3>
+                            <h3 class="icon-card__title">Roadmap and Strategy</h3>
                             <p>Expertise in building technology roadmap and strategy aligned to an organization's culture, vision and goals.</p>
                         </section>
-                        <section class="icon-card box-shadow bg-color-primary-light border-top border-radius">
-                            <span class="fa-stack fa-2x">
+                        <section class="icon-card box-shadow bg--primary-light border-top border-radius">
+                            <span class="icon-card__icon fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-balance-scale fa-stack-1x"></i>
                             </span>
-                            <h3>Transformation Management</h3>
+                            <h3 class="icon-card__title">Transformation Management</h3>
                             <p>Digital transformation that includes migration to cloud and organizational change management services.
                             </p>
                         </section>
@@ -118,54 +121,54 @@
             </section>
 
             <!-- About -->
-            <section id="about" class="bg-color-tertiary font-color-secondary">
-                <div class="section-header animated parallax">
+            <section id="about" class="main-section bg--tertiary font-color--secondary">
+                <div class="main-section__header animated parallax">
                     <div class="l-main-content">
-                        <h2 class="font-color-tertiary">About</h2>
+                        <h2 class="font-color--tertiary">About</h2>
                         <p style="text-align: center;">Sameen Integration Technology Consulting is passionate about helping business partners meet their goals and objectives.</p>
                     </div>
                 </div>
 
-                <div class="l-main-content section-content">
+                <div class="l-main-content main-section__content">
                     <!-- Industries -->
-                    <div class="industries animated bg-color-tertiary box-shadow border-radius border-top">
+                    <div class="industries animated bg--tertiary box-shadow border-radius border-top">
                       <div class="l-flex-row l-flex-2-column is-responsive">
                         <!-- Table-->
-                        <div class="industries-table l-grid-2-column offset-every-other">
-                          <div class="icon-card small">
-                            <span class="fa-stack fa-2x">
+                        <div class="industries__table l-grid-2-column offset-every-other">
+                          <div class="icon-card icon-card--small">
+                            <span class="icon-card__icon fa-stack fa-2x">
                               <i class="fa fa-circle fa-stack-2x"></i>
                               <i class="fa fa-universal-access fa-stack-1x"></i>
                             </span>
-                            <h3>Nonprofit</h3>
+                            <h3 class="icon-card__title">Nonprofit</h3>
                           </div>
-                          <div class="icon-card small">
-                            <span class="fa-stack fa-2x">
+                          <div class="icon-card icon-card--small">
+                            <span class="icon-card__icon fa-stack fa-2x">
                               <i class="fa fa-circle fa-stack-2x"></i>
                               <i class="fa fa-lock fa-stack-1x"></i>
                             </span>
-                            <h3>Security</h3>
+                            <h3 class="icon-card__title">Security</h3>
                           </div>
-                          <div class="icon-card small">
-                            <span class="fa-stack fa-2x">
+                          <div class="icon-card icon-card--small">
+                            <span class="icon-card__icon fa-stack fa-2x">
                               <i class="fa fa-circle fa-stack-2x"></i>
                               <i class="fa fa-support fa-stack-1x"></i>
                             </span>
-                            <h3>Insurance</h3>
+                            <h3 class="icon-card__title">Insurance</h3>
                           </div>
-                          <div class="icon-card small">
-                            <span class="fa-stack fa-2x">
+                          <div class="icon-card icon-card--small">
+                            <span class="icon-card__icon fa-stack fa-2x">
                               <i class="fa fa-circle fa-stack-2x"></i>
                               <i class="fa fa-microchip fa-stack-1x"></i>
                             </span>
-                            <h3>Tech</h3>
+                            <h3 class="icon-card__title">Tech</h3>
                           </div>
-                          <div class="icon-card small">
-                            <span class="fa-stack fa-2x">
+                          <div class="icon-card icon-card--small">
+                            <span class="icon-card__icon fa-stack fa-2x">
                               <i class="fa fa-circle fa-stack-2x"></i>
                               <i class="fa fa-heartbeat fa-stack-1x"></i>
                             </span>
-                            <h3>Medical</h3>
+                            <h3 class="icon-card__title">Medical</h3>
                           </div>
                           <div style="align-self: center; padding-left: 1em;">
                             <a href="https://www.linkedin.com/in/wamizsameen/"><span style="padding-bottom: 1em; border-bottom: var(--color-tertiary) solid 2px;">LEARN MORE</span></a>
@@ -173,7 +176,7 @@
                         </div>
                         <!-- Content -->
                         <div>
-                          <h3 style="margin-bottom: 1em; text-align: right;"><b class="font-color-tertiary">EXPERIENCE</b> ACROSS SECTORS</h3>
+                          <h3 style="margin-bottom: 1em; text-align: right;"><b class="font-color--tertiary">EXPERIENCE</b> ACROSS SECTORS</h3>
                           <p>At Sameen Consulting we have experience with partners from across diverse business sectors. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
                       </div>
@@ -181,34 +184,34 @@
                       <div style="column-gap: 2rem;" class="clients l-grid-2-column is-responsive">
                         <!-- Tech -->
                         <div class="client-card">
-                          <img src="images/oculus.jpg">
-                          <section class="bg-color-primary-light font-color-primary border-top">
+                          <img src="images/oculus.jpg" alt="Meta Reality Labs" decoding="async">
+                          <section class="client-card__content bg--primary-light font-color--primary border-top">
                             <h3>Meta Reality Labs</h3>
-                            <p>Program Executive for the AR/VR program, leading product life cycle management, global trade compliance, dangerous goods and master data management initiatives.</p>
+                            <p class="client-card__text">Program Executive for the AR/VR program, leading product life cycle management, global trade compliance, dangerous goods and master data management initiatives.</p>
                           </section>
                         </div>
                         <!-- Nonprofit -->
                         <div class="client-card">
-                          <img src="images/braille.jpg">
-                          <section class="bg-color-primary-light font-color-primary border-top">
+                          <img src="images/braille.jpg" alt="National Industries for the Blind" decoding="async">
+                          <section class="client-card__content bg--primary-light font-color--primary border-top">
                             <h3>NIB</h3>
-                            <p>Transformed the business model of the National Industries for the Blind to digital data transfer and e-commerce platforms realizing a revenue of $5M dollars the first year.</p>
+                            <p class="client-card__text">Transformed the business model of the National Industries for the Blind to digital data transfer and e-commerce platforms realizing a revenue of $5M dollars the first year.</p>
                           </section>
                         </div>
                         <!-- Security -->
                         <div class="client-card">
-                          <img src="images/camera.jpg">
-                          <section class="bg-color-primary-light font-color-primary border-top">
+                          <img src="images/camera.jpg" alt="AIG" decoding="async">
+                          <section class="client-card__content bg--primary-light font-color--primary border-top">
                             <h3>Johnson Controls</h3>
-                            <p>Delivered global business transformation for finance, procurement, and supply chain which helped realize benefits of $500M+ over a 3 year period.</p>
+                            <p class="client-card__text">Delivered global business transformation for finance, procurement, and supply chain which helped realize benefits of $500M+ over a 3 year period.</p>
                           </section>
                         </div>
                         <!-- Insurance -->
                         <div class="client-card">
-                          <img src="images/insurance.jpg">
-                          <section class="bg-color-primary-light font-color-primary border-top">
+                          <img src="images/insurance.jpg" decoding="async">
+                          <section class="client-card__content bg--primary-light font-color--primary border-top">
                             <h3>AIG</h3>
-                            <p>Program Executive for the Delivery Office of a $95M Private Client Group, as well as Global Procurement and Sourcing Contract separation for 1000+ applications.</p>
+                            <p class="client-card__text">Program Executive for the Delivery Office of a $95M Private Client Group, as well as Global Procurement and Sourcing Contract separation for 1000+ applications.</p>
                           </section>
                         </div>
                       </div>
@@ -217,36 +220,36 @@
                     <!-- Detailed about -->
                     <div class="about-details animated l-flex-row l-flex-2-column">
                       <div class="about-image">
-                        <div class="background bg-color-primary-light"></div>
-                        <img class="box-shadow" src="images/profile.jpg" alt="Wamiz Sameen">
+                        <div class="background bg--primary-light"></div>
+                        <img class="box-shadow" src="images/profile.jpg" alt="Wamiz Sameen" decoding="async">
                       </div>
-                      <p><b style="font-size: 1.5rem;" class="font-color-tertiary">Wamiz Sameen</b>, founder and managing director of Sameen Integration Technology Consulting, is an accomplished executive leader, respected as a strong executor and team builder. He leads by example, has a “Can-do” attitude and has delivered several complex and visible information technology initiatives for multiple Fortune 500 companies. During his 20 years of professional experience, Wamiz has built high performing global integration management offices and achieved proven results.</p>
+                      <p><b style="font-size: 1.5rem;" class="font-color--tertiary">Wamiz Sameen</b>, founder and managing director of Sameen Integration Technology Consulting, is an accomplished executive leader, respected as a strong executor and team builder. He leads by example, has a “Can-do” attitude and has delivered several complex and visible information technology initiatives for multiple Fortune 500 companies. During his 20 years of professional experience, Wamiz has built high performing global integration management offices and achieved proven results.</p>
                     </div>
 
                     <!-- Values -->
                     <div class="values">
-                      <h3 style="margin-bottom: 2em; font-size: var(--font-size-header)">Our Core <b class="font-color-tertiary">Values</b></h3>
+                      <h3 style="margin-bottom: 2em; font-size: var(--font-size-header)">Our Core <b class="font-color--tertiary">Values</b></h3>
                       <div class="values-table animated l-flex-row">
                         <div class="icon-card">
-                            <span class="fa-stack fa-2x">
+                            <span class="icon-card__icon fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-bolt fa-stack-1x"></i>
                             </span>
-                            <h3>Sense of Urgency</h3>
+                            <h3 class="icon-card__title">Sense of Urgency</h3>
                         </div>
                         <div class="icon-card">
-                            <span class="fa-stack fa-2x">
+                            <span class="icon-card__icon fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-handshake-o fa-stack-1x"></i>
                             </span>
-                            <h3>Commitment</h3>
+                            <h3 class="icon-card__title">Commitment</h3>
                         </div>
                         <div class="icon-card">
-                            <span class="fa-stack fa-2x">
+                            <span class="icon-card__icon fa-stack fa-2x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-certificate fa-stack-1x"></i>
                             </span>
-                            <h3>Accountability</h3>
+                            <h3 class="icon-card__title">Accountability</h3>
                         </div>
                       </div>
                     </div>
@@ -255,16 +258,16 @@
             </section>
 
             <!-- Contact -->
-            <section id="contact">
-                <div class="section-header animated parallax">
+            <section id="contact" class="main-section">
+                <div class="main-section__header animated parallax">
                     <div class="animated l-main-content">
-                        <h2 class="font-color-tertiary">Contact</h2>
+                        <h2 class="font-color--tertiary">Contact</h2>
                         <p>Get in touch...</p>
                     </div>
                 </div>
                 <div class="l-main-content">
-                    <div class="section-content">
-                        <form class="contact-form animated box-shadow bg-color-primary-light border-top border-radius">
+                    <div class="main-section__content">
+                        <form class="contact-form animated box-shadow bg--primary-light border-top border-radius">
                             <div class="l-flex-row">
                                 <div>
                                     <label for="name">Name</label>
@@ -291,36 +294,38 @@
         <footer id="footer" class="l-main-content animated" style="background-color: #13201e">
           <div class="l-flex-column">
             <!-- Email -->
-            <section class="icon-card small">
-                <span class="fa-stack fa-2x">
+            <section class="icon-card icon-card--small">
+                <span class="icon-card__icon fa-stack fa-2x">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-phone fa-stack-1x"></i>
                 </span>
-                <h3>555-555-5555</h3>
+                <h3 class="icon-card__title">555-555-5555</h3>
             </section>
             <!-- Phone-->
-            <section class="icon-card small">
-                <span class="fa-stack fa-2x">
+            <section class="icon-card icon-card--small">
+                <span class="icon-card__icon fa-stack fa-2x">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-envelope fa-stack-1x"></i>
                 </span>
-                <h3>myemail@domain.com</h3>
+                <h3 class="icon-card__title">myemail@domain.com</h3>
             </section>
             <!-- Address -->
-            <section class="icon-card small">
-                <span class="fa-stack fa-2x">
+            <section class="icon-card icon-card--small">
+                <span class="icon-card__icon fa-stack fa-2x">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-map-marker fa-stack-1x"></i>
                 </span>
-                <h3>Miami, FL</h3>
+                <h3 class="icon-card__title">Miami, FL</h3>
             </section>
         </div>
         </footer>
 
-        <script src="scrollToAnchor.js"></script>
-        <!-- <script src="onScroll.js"></script> -->
-        <script src="intersectionObserver.js"></script>
-        <script src="header.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+
+        <script src="js/scrollToAnchor.js" type="text/javascript"></script>
+        <!-- <script src="js/onScroll.js" type="text/javascript"></script> -->
+        <script src="js/intersectionObserver.js" type="text/javascript"></script>
+        <script src="js/header.js" type="text/javascript"></script>
 
     </body>
 </html>
