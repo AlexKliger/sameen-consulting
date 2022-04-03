@@ -319,6 +319,31 @@ nav a:hover {
 		width: 30%;
 	}
 
+	.industries__content {
+		position: relative;
+		min-height: 250px;
+	}
+
+	.industries__title {
+		margin-bottom: 1em;
+		text-align: left;
+	}
+
+	.industries__text {
+		position: absolute;
+	}
+
+		.industries__text--top {
+			left: 50%;
+			width: 80%;
+			transform: translateX(-50%);
+		}
+
+		.industries__text--bottom {
+			bottom: 0;
+		}
+
+
 input[type=text], textarea {
 	font-size: 16px;
 	margin: 0.75em 0 1.5em 0;
@@ -486,140 +511,5 @@ label {
 
 	.values-table > *:nth-child(3) {
 		transform: none;
-	}
-}
-
-/* Animation */
-.animated {
-	will-change: transform opacity;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	p.animate {
-		animation-name: slide-from-bottom;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.sidebar.animate {
-		animation-name: slide-from-left;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.sidebar.animate img, .sidebar.animate h3 {
-		animation-name: slide-from-top;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.sidebar.animate nav, .sidebar.animate footer, .sidebar.animate p {
-		animation-name: slide-from-bottom;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.services-table.animate {
-		animation-name: slide-from-right;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.clients-table.animate {
-		animation-name: slide-from-left;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.values-table.animate {
-		animation-name: slide-from-right;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.about-details.animate .about-image {
-		animation-name: slide-from-left;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.about-details.animate p {
-		animation-name: slide-from-right;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.contact-form.animate {
-		animation-name: slide-from-bottom;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.section-header.animate > * {
-		animation-name: slide-from-bottom;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	.industries.animate {
-		animation-name: slide-from-bottom;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-	footer.animate .icon-card {
-		animation-name: slide-from-right;
-		animation-duration: var(--animation-duration);
-		animation-iteration-count: 1;
-	}
-
-}
-
-@keyframes slide-from-left {
-	from {
-		transform: translateX(-25%);
-		opacity: 0;
-	}
-
-	to {
-		transform: translateX(0);
-		opacity: 1;
-	}
-}
-
-@keyframes slide-from-right {
-	from {
-		transform: translateX(25%);
-		opacity: 0;
-	}
-
-	to {
-		transform: translateX(0);
-		opacity: 1;
-	}
-}
-
-
-@keyframes slide-from-top {
-	from {
-		transform: translateY(-25%);
-		opacity: 0;
-	}
-
-	to {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-
-@keyframes slide-from-bottom {
-	from {
-		transform: translateY(25%);
-		opacity: 0;
-	}
-
-	to {
-		transform: translateY(0);
-		opacity: 1;
 	}
 }
