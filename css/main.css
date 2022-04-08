@@ -333,12 +333,6 @@ nav a:hover {
 		position: absolute;
 	}
 
-		.industries__text--top {
-			left: 50%;
-			width: 80%;
-			transform: translateX(-50%);
-		}
-
 		.industries__text--bottom {
 			bottom: 0;
 		}
