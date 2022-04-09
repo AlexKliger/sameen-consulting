@@ -221,6 +221,13 @@ nav a:hover {
 		position: relative;
 	}
 
+.clients {
+	column-gap: 2em;
+	padding: 2em 1em 0 1em;
+	margin-bottom: 7em;
+}
+	
+
 .client-card {
 	position: relative;
 }
@@ -307,16 +314,15 @@ nav a:hover {
 		}
 
 .industries {
-	padding: 2em 1em 0 1em;
-	margin-bottom: 7em;
+	
 }
 	.industries .l-flex-2-column {
 		margin-bottom: 4em;
 	}
 
 	.industries__table {
-		row-gap: 3em;
-		width: 30%;
+		row-gap: 6em;
+		column-gap: 33%;
 	}
 
 	.industries__content {
@@ -325,7 +331,7 @@ nav a:hover {
 	}
 
 	.industries__title {
-		margin-bottom: 1em;
+		margin-bottom: 3em;
 		text-align: left;
 	}
 
@@ -435,6 +441,11 @@ label {
 		gap: 0;
 	}
 
+
+	.industries__table {
+		column-gap: 1em;
+		row-gap: 3em;
+	}
 }
 
 @media only screen and (max-width: 500px) {
