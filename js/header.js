@@ -11,17 +11,4 @@ function toggleHeader() {
     } else {
         body.classList.add("header-hidden");
     }
-
-
-    // if (!header.classList.contains("is-hidden")) {
-    //     header.classList.add("is-hidden");
-    //     for (let overlay of opaqueOverlays) {
-    //         overlay.style.display = "none";
-    //     }
-    // } else {
-    //     header.classList.remove("is-hidden");
-    //     for (let overlay of opaqueOverlays) {
-    //         overlay.style.display = "block";
-    //     }
-    // }
 }
