@@ -6,8 +6,12 @@
 	background-color: var(--color-primary-light);
 }
 
-.bg--tertiary {
+.bg--secondary {
 	background-color: var(--color-secondary);
+}
+
+.bg--tertiary {
+	background-color: var(--color-tertiary);
 }
 
 .font-color--primary {
